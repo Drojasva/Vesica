@@ -78,6 +78,21 @@ export default function ProductPage() {
         </div>
       </section>
 
+      {/* Get Started Section */}
+      <section className={styles.getStartedSection}>
+        <div className={styles.container}>
+          <span className={styles.getStartedTag}>Get Started</span>
+          <h2 className={styles.getStartedHeading}>Welcome to your digital future</h2>
+          <p className={styles.getStartedText}>
+            Schedule a custom demo and have an expert show you how Parsable works.
+          </p>
+          <div className={styles.getStartedBtns}>
+            <a href="#" className={styles.btnOutline}>Get Started</a>
+            <a href="#" className={styles.btnFilled}>Book a Demo</a>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   )

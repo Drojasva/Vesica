@@ -219,7 +219,16 @@ nav {
 .testi-role { font-size: 13px; color: var(--gray-text); }
 
 /* ── CTA ── */
-.cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--blue-mid) 100%); color: #fff; padding: 90px 5%; text-align: center; }
+.cta-section {
+  background: linear-gradient(rgba(11, 30, 61, 0.85), rgba(11, 30, 61, 0.85)), url('/cta_dark_bg.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 120px 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 .cta-section h2 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 800; margin-bottom: 16px; letter-spacing: -1px; }
 .cta-section p { font-size: 17px; color: #8aa4c6; max-width: 520px; margin: 0 auto 36px; }
 .cta-section .btn-hero-primary { font-size: 16px; padding: 16px 36px; }
