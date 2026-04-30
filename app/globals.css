@@ -61,11 +61,15 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--blue-mid) 60%, #1e4a8a 100%);
+  background: linear-gradient(rgba(11, 30, 61, 0.8), rgba(11, 30, 61, 0.8)), url('/cta_dark_bg.png');
+  background-size: cover;
+  background-position: center;
   color: #fff;
   padding: 100px 5% 80px;
   display: flex; align-items: center; gap: 60px;
   min-height: 600px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content { flex: 1; max-width: 560px; }
