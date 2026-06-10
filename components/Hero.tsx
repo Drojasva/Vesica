@@ -9,7 +9,7 @@ export default function Hero() {
           connected workflows, and real-time operational insights — replacing paper and legacy systems.
         </p>
         <div className="hero-btns">
-          <a href="#" className="btn-hero-primary">Request a Demo</a>
+          <a href="/demo" className="btn-hero-primary">Request a Demo</a>
           <a href="#" className="btn-hero-outline">Watch Overview ▶</a>
         </div>
       </div>

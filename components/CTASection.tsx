@@ -6,7 +6,7 @@ export default function CTASection() {
         Join hundreds of industrial companies using Vesica to digitize operations and unlock the
         full potential of their workforce.
       </p>
-      <a href="#" className="btn-hero-primary">Request a Free Demo</a>
+      <a href="/demo" className="btn-hero-primary">Request a Free Demo</a>
       <p style={{ marginTop: '18px', fontSize: '14px', color: '#5a7a9e' }}>
         No credit card required · Setup in days · Dedicated onboarding support
       </p>

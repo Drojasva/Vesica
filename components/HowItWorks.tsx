@@ -1,3 +1,7 @@
+'use client'
+
+import { useState } from 'react'
+
 const steps = [
   {
     title: 'Build Your Digital SOPs',
@@ -18,6 +22,8 @@ const steps = [
 ]
 
 export default function HowItWorks() {
+  const [activeStep, setActiveStep] = useState(-1)
+
   return (
     <section className="how">
       <div className="how-content">
@@ -28,7 +34,7 @@ export default function HowItWorks() {
           teams up and running fast.
         </p>
         <a
-          href="#"
+          href="/demo"
           className="btn-primary"
           style={{ display: 'inline-block', marginTop: '10px', padding: '12px 26px', borderRadius: '8px', fontSize: '15px' }}
         >
@@ -36,10 +42,19 @@ export default function HowItWorks() {
         </a>
       </div>
       <div className="how-steps">
+        <div className="timeline-line" />
         {steps.map((step, i) => (
-          <div key={step.title} className="step">
-            <div className="step-num">{i + 1}</div>
-            <div>
+          <div
+            key={step.title}
+            className={`step step-animated ${activeStep === i ? 'step-active' : ''}`}
+            style={{ animationDelay: `${i * 0.15}s` }}
+            onMouseEnter={() => setActiveStep(i)}
+            onMouseLeave={() => setActiveStep(-1)}
+          >
+            <div className="step-num-wrapper">
+              <div className={`step-num ${activeStep === i ? 'step-num-glow' : ''}`}>{i + 1}</div>
+            </div>
+            <div className="step-card">
               <h4>{step.title}</h4>
               <p>{step.desc}</p>
             </div>
