@@ -1,6 +1,13 @@
 const productLinks = ['Instrucciones de Trabajo', 'Flujos Conectados', 'Analíticas', 'Integraciones', 'App Móvil']
 const solutionLinks = ['Manufactura', 'Energía y Servicios', 'Alimentos y Bebidas', 'Químicos', 'Minería']
-const resourceLinks = ['Blog', 'Casos de Éxito', 'Webinars', 'Documentación', 'Comunidad']
+const resourceLinks = [
+  { label: 'Servicios', href: '/recursos' },
+  { label: 'Blog', href: '#' },
+  { label: 'Casos de Éxito', href: '#' },
+  { label: 'Webinars', href: '#' },
+  { label: 'Documentación', href: '#' },
+  { label: 'Comunidad', href: '#' },
+]
 const companyLinks = ['Nosotros', 'Carreras', 'Prensa', 'Socios', 'Contacto']
 
 export default function Footer() {
@@ -30,7 +37,7 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h5>Recursos</h5>
-          <ul>{resourceLinks.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
+          <ul>{resourceLinks.map((l) => <li key={l.label}><a href={l.href}>{l.label}</a></li>)}</ul>
         </div>
         <div className="footer-col">
           <h5>Empresa</h5>

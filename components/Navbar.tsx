@@ -13,7 +13,7 @@ const solutions = [
 
 const navLinks = [
   { label: 'Industrias', href: '#' },
-  { label: 'Recursos', href: '#' },
+  { label: 'Recursos', href: '/recursos' },
   { label: 'Empresa', href: '#' },
 ]
 
