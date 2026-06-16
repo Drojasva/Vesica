@@ -1,17 +1,17 @@
 const stats = [
-  { num: '75%', label: 'Reduction in unplanned\ndowntime' },
-  { num: '3M+', label: 'Work instructions\ncompleted digitally' },
-  { num: '60%', label: 'Faster onboarding\nfor new workers' },
-  { num: '40%', label: 'Reduction in quality\ndefects' },
+  { num: '75%', label: 'Reducción en tiempo de\ninactividad no planificado' },
+  { num: '3M+', label: 'Instrucciones de trabajo\ncompletadas digitalmente' },
+  { num: '60%', label: 'Incorporación más rápida\npara nuevos trabajadores' },
+  { num: '40%', label: 'Reducción en defectos\nde calidad' },
 ]
 
 export default function Stats() {
   return (
     <section className="stats">
-      <h2>Proven Impact at Scale</h2>
+      <h2>Impacto Comprobado a Escala</h2>
       <p>
-        Vesica delivers measurable outcomes across manufacturing, energy, and food &amp; beverage
-        industries worldwide.
+        Vesica ofrece resultados medibles en industrias manufactureras, energéticas y de
+        alimentos y bebidas en todo el mundo.
       </p>
       <div className="stats-grid">
         {stats.map((s) => (

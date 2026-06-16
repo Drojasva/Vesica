@@ -1,14 +1,14 @@
 export default function CTASection() {
   return (
     <section className="cta-section">
-      <h2>Ready to Connect Your Frontline?</h2>
+      <h2>¿Listo para Conectar tu Primera Línea?</h2>
       <p>
-        Join hundreds of industrial companies using Vesica to digitize operations and unlock the
-        full potential of their workforce.
+        Únete a cientos de empresas industriales que utilizan Vesica para digitalizar
+        operaciones y desbloquear todo el potencial de su fuerza laboral.
       </p>
-      <a href="/demo" className="btn-hero-primary">Request a Free Demo</a>
+      <a href="/demo" className="btn-hero-primary">Solicita una Demo Gratis</a>
       <p style={{ marginTop: '18px', fontSize: '14px', color: '#5a7a9e' }}>
-        No credit card required · Setup in days · Dedicated onboarding support
+        Sin tarjeta de crédito · Configuración en días · Soporte de incorporación dedicado
       </p>
     </section>
   )

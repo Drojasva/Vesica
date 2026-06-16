@@ -1,8 +1,8 @@
 const features = [
   {
     iconClass: 'icon-orange',
-    title: 'Digital Work Instructions',
-    desc: 'Replace paper checklists and PDFs with rich, multimedia SOPs — complete with images, videos, and guided steps that workers can follow on any device.',
+    title: 'Instrucciones de Trabajo Digitales',
+    desc: 'Reemplaza listas de verificación en papel y PDFs con POE multimedia enriquecidas — con imágenes, videos y pasos guiados que los trabajadores pueden seguir desde cualquier dispositivo.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
@@ -14,8 +14,8 @@ const features = [
   },
   {
     iconClass: 'icon-blue',
-    title: 'Connected Workflows',
-    desc: 'Connect people, processes, and systems. Trigger automated notifications, escalations, and approvals based on real-time field data.',
+    title: 'Flujos de Trabajo Conectados',
+    desc: 'Conecta personas, procesos y sistemas. Activa notificaciones automatizadas, escalamientos y aprobaciones basadas en datos de campo en tiempo real.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="6" cy="6" r="3" />
@@ -30,8 +30,8 @@ const features = [
   },
   {
     iconClass: 'icon-green',
-    title: 'Operational Insights',
-    desc: 'Capture structured data at the point of work and surface actionable insights in live dashboards — for managers, supervisors, and executives.',
+    title: 'Información Operacional',
+    desc: 'Captura datos estructurados en el punto de trabajo y genera información procesable en paneles en vivo — para gerentes, supervisores y ejecutivos.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="18" y1="20" x2="18" y2="10" />
@@ -43,8 +43,8 @@ const features = [
   },
   {
     iconClass: 'icon-purple',
-    title: 'Safety & Compliance',
-    desc: 'Embed safety checks, permits-to-work, and compliance steps directly into operational workflows to ensure every task is done safely and correctly.',
+    title: 'Seguridad y Cumplimiento',
+    desc: 'Integra controles de seguridad, permisos de trabajo y pasos de cumplimiento directamente en los flujos de trabajo operativos para garantizar que cada tarea se realice de forma segura y correcta.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -54,8 +54,8 @@ const features = [
   },
   {
     iconClass: 'icon-orange',
-    title: 'Integrations & APIs',
-    desc: 'Seamlessly connect with your existing ERP, CMMS, and IoT systems. Vesica integrates with SAP, Microsoft, Salesforce, and more.',
+    title: 'Integraciones y APIs',
+    desc: 'Conéctate sin problemas con tus sistemas ERP, CMMS e IoT existentes. Vesica se integra con SAP, Microsoft, Salesforce y más.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3" />
@@ -65,8 +65,8 @@ const features = [
   },
   {
     iconClass: 'icon-blue',
-    title: 'Works Anywhere',
-    desc: 'Available on iOS, Android, and web. Offline mode ensures work continues even in the most remote or connectivity-challenged industrial environments.',
+    title: 'Funciona en Cualquier Lugar',
+    desc: 'Disponible en iOS, Android y web. El modo offline garantiza que el trabajo continúe incluso en los entornos industriales más remotos o con conectividad limitada.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="7" y="2" width="10" height="20" rx="2" ry="2" />
@@ -81,11 +81,11 @@ const features = [
 export default function Features() {
   return (
     <section className="features" id="features">
-      <div className="section-tag">Platform Capabilities</div>
-      <h2 className="section-title">Everything Your Frontline Needs</h2>
+      <div className="section-tag">Capacidades de la Plataforma</div>
+      <h2 className="section-title">Todo lo que tu Primera Línea Necesita</h2>
       <p className="section-sub">
-        From digital SOPs to real-time analytics, Vesica gives frontline teams the tools to work
-        safer, smarter, and faster.
+        Desde POE digitales hasta análisis en tiempo real, Vesica brinda a los equipos de primera
+        línea las herramientas para trabajar de forma más segura, inteligente y rápida.
       </p>
       <div className="features-hero-row">
         {features.slice(0, 2).map((f) => (

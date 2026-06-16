@@ -2,15 +2,16 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <div className="hero-badge">Connected Worker® Platform</div>
-        <h1>Digital Tools for<br /><span>Frontline Operations</span></h1>
+        <div className="hero-badge">Plataforma Connected Worker®</div>
+        <h1>Herramientas Digitales para<br /><span>Operaciones de Primera Línea</span></h1>
         <p>
-          Vesica empowers industrial frontline workers with modern digital work instructions,
-          connected workflows, and real-time operational insights — replacing paper and legacy systems.
+          Vesica empodera a los trabajadores industriales de primera línea con instrucciones
+          de trabajo digitales modernas, flujos de trabajo conectados y perspectivas operativas
+          en tiempo real — reemplazando el papel y los sistemas heredados.
         </p>
         <div className="hero-btns">
-          <a href="/demo" className="btn-hero-primary">Request a Demo</a>
-          <a href="#" className="btn-hero-outline">Watch Overview ▶</a>
+          <a href="/demo" className="btn-hero-primary">Solicitar una Demo</a>
+          <a href="#" className="btn-hero-outline">Ver Vista General ▶</a>
         </div>
       </div>
 
@@ -20,19 +21,19 @@ export default function Hero() {
           <div className="dot dot-y"></div>
           <div className="dot dot-g"></div>
           <span style={{ color: '#8aa4c6', fontSize: '12px', marginLeft: '8px' }}>
-            Operations Dashboard
+            Panel de Operaciones
           </span>
         </div>
         <div className="hero-visual-body">
           <div className="dashboard-card">
-            <h4>Task Completion Rate</h4>
+            <h4>Tasa de Finalización</h4>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
               <div className="big-num">94.7%</div>
-              <div className="trend">↑ 12% this week</div>
+              <div className="trend">↑ 12% esta semana</div>
             </div>
             <div className="progress-bar-wrap">
               <div className="pb-label">
-                <span>Progress</span><span>94.7%</span>
+                <span>Progreso</span><span>94.7%</span>
               </div>
               <div className="pb">
                 <div className="pb-fill" style={{ width: '94.7%' }}></div>
@@ -42,27 +43,27 @@ export default function Hero() {
 
           <div className="db-row">
             <div className="db-col">
-              <h4>Active Workers</h4>
+              <h4>Trabajadores Activos</h4>
               <div className="val">2,418</div>
-              <div className="sub">↑ 8% vs last month</div>
+              <div className="sub">↑ 8% vs mes anterior</div>
             </div>
             <div className="db-col">
-              <h4>Safety Incidents</h4>
+              <h4>Incidentes de Seguridad</h4>
               <div className="val">0</div>
-              <div className="sub" style={{ color: '#4ade80' }}>30 days clean ✓</div>
+              <div className="sub" style={{ color: '#4ade80' }}>30 días sin incidentes ✓</div>
             </div>
           </div>
 
           <div style={{ marginTop: '14px' }}>
             <div className="pb-label" style={{ color: '#b8c8e0', fontSize: '13px', marginBottom: '6px' }}>
-              <span>Quality Score</span>
+              <span>Puntaje de Calidad</span>
               <span style={{ color: '#4ade80' }}>98.2%</span>
             </div>
             <div className="pb">
               <div className="pb-fill" style={{ width: '98.2%', background: '#4ade80' }}></div>
             </div>
             <div className="pb-label" style={{ color: '#b8c8e0', fontSize: '13px', marginBottom: '6px', marginTop: '10px' }}>
-              <span>SOP Adherence</span>
+              <span>Adherencia a POE</span>
               <span style={{ color: '#f26522' }}>87.5%</span>
             </div>
             <div className="pb">

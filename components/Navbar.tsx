@@ -5,14 +5,16 @@ import Link from 'next/link'
 import { ChevronDown, Menu, X } from 'lucide-react'
 
 const solutions = [
-  { label: 'Maintenance', href: '/solutions/maintenance' },
-  { label: 'Production', href: '/solutions/production' },
+  { label: 'Mantenimiento', href: '/solutions/maintenance' },
+  { label: 'Producción', href: '/solutions/production' },
+  { label: 'Seguridad', href: '/solutions/safety' },
+  { label: 'Calidad', href: '/solutions/quality' },
 ]
 
 const navLinks = [
-  { label: 'Industries', href: '#' },
-  { label: 'Resources', href: '#' },
-  { label: 'Company', href: '#' },
+  { label: 'Industrias', href: '#' },
+  { label: 'Recursos', href: '#' },
+  { label: 'Empresa', href: '#' },
 ]
 
 export default function Navbar() {
@@ -44,8 +46,7 @@ export default function Navbar() {
     setMobileSolutionsOpen(false)
   }
 
-  function toggleSolutions(e: React.MouseEvent<HTMLButtonElement>) {
-    e.stopPropagation()
+  function toggleSolutions() {
     setSolutionsOpen((open) => !open)
   }
 
@@ -57,7 +58,7 @@ export default function Navbar() {
       </Link>
 
       <ul className="nav-links">
-        <li><Link href="/product">Product</Link></li>
+        <li><Link href="/product">Producto</Link></li>
         <li
           ref={dropdownRef}
           className={`nav-dropdown-parent ${solutionsOpen ? 'is-open' : ''}`}
@@ -69,7 +70,7 @@ export default function Navbar() {
             aria-expanded={solutionsOpen}
             aria-haspopup="true"
           >
-            Solutions
+            Soluciones
             <ChevronDown size={14} className={`nav-chevron ${solutionsOpen ? 'nav-chevron-open' : ''}`} />
           </button>
           {solutionsOpen && (
@@ -95,7 +96,7 @@ export default function Navbar() {
       </ul>
 
       <div className="nav-cta">
-        <Link href="/demo" className="btn-primary">Request Demo</Link>
+        <Link href="/demo" className="btn-primary">Solicitar Demo</Link>
         <button
           type="button"
           className="nav-mobile-toggle"
@@ -109,7 +110,7 @@ export default function Navbar() {
 
       {mobileOpen && (
         <div className="nav-mobile-panel">
-          <Link href="/product" className="nav-mobile-link" onClick={closeMobile}>Product</Link>
+          <Link href="/product" className="nav-mobile-link" onClick={closeMobile}>Producto</Link>
           <div className="nav-mobile-group">
             <button
               type="button"
@@ -117,7 +118,7 @@ export default function Navbar() {
               onClick={() => setMobileSolutionsOpen((open) => !open)}
               aria-expanded={mobileSolutionsOpen}
             >
-              Solutions
+              Soluciones
               <ChevronDown size={16} className={`nav-chevron ${mobileSolutionsOpen ? 'nav-chevron-open' : ''}`} />
             </button>
             {mobileSolutionsOpen && (
@@ -141,7 +142,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="/demo" className="btn-primary nav-mobile-cta" onClick={closeMobile}>
-            Request Demo
+            Solicitar Demo
           </Link>
         </div>
       )}

@@ -1,7 +1,7 @@
-const productLinks = ['Work Instructions', 'Connected Workflows', 'Analytics', 'Integrations', 'Mobile App']
-const solutionLinks = ['Manufacturing', 'Energy & Utilities', 'Food & Beverage', 'Chemicals', 'Mining']
-const resourceLinks = ['Blog', 'Case Studies', 'Webinars', 'Documentation', 'Community']
-const companyLinks = ['About Us', 'Careers', 'Press', 'Partners', 'Contact']
+const productLinks = ['Instrucciones de Trabajo', 'Flujos Conectados', 'Analíticas', 'Integraciones', 'App Móvil']
+const solutionLinks = ['Manufactura', 'Energía y Servicios', 'Alimentos y Bebidas', 'Químicos', 'Minería']
+const resourceLinks = ['Blog', 'Casos de Éxito', 'Webinars', 'Documentación', 'Comunidad']
+const companyLinks = ['Nosotros', 'Carreras', 'Prensa', 'Socios', 'Contacto']
 
 export default function Footer() {
   return (
@@ -15,35 +15,35 @@ export default function Footer() {
             </span>
           </div>
           <p>
-            The Connected Worker® Platform by Vesica for industrial frontline operations.
-            Empowering workers. Improving performance.
+            La plataforma Connected Worker® de Vesica para operaciones industriales de primera línea.
+            Empoderando trabajadores. Mejorando el rendimiento.
           </p>
         </div>
 
         <div className="footer-col">
-          <h5>Product</h5>
+          <h5>Producto</h5>
           <ul>{productLinks.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
         </div>
         <div className="footer-col">
-          <h5>Solutions</h5>
+          <h5>Soluciones</h5>
           <ul>{solutionLinks.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
         </div>
         <div className="footer-col">
-          <h5>Resources</h5>
+          <h5>Recursos</h5>
           <ul>{resourceLinks.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
         </div>
         <div className="footer-col">
-          <h5>Company</h5>
+          <h5>Empresa</h5>
           <ul>{companyLinks.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© 2026 Vesica, Inc. All rights reserved. Connected Worker® is a registered trademark.</span>
+        <span>© 2026 Vesica, Inc. Todos los derechos reservados. Connected Worker® es una marca registrada.</span>
         <div style={{ display: 'flex', gap: '24px' }}>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Settings</a>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos del Servicio</a>
+          <a href="#">Configuración de Cookies</a>
         </div>
       </div>
     </footer>

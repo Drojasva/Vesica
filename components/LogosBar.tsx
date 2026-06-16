@@ -3,7 +3,7 @@ const logos = ['Heineken', 'Colgate', 'Dow', 'Nutrien', 'Veolia', 'ArcelorMittal
 export default function LogosBar() {
   return (
     <div className="logos-bar">
-      <p>Trusted by world-class industrial companies</p>
+      <p>Confiado por empresas industriales de clase mundial</p>
       <div className="logos-marquee-wrapper">
         <div className="logos-marquee-track">
           {logos.map((name) => (

@@ -3,29 +3,29 @@ import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
 
 export const metadata = {
-  title: 'Production Solutions | Vesica Connected Worker®',
-  description: 'Streamline production workflows, increase throughput, and empower your frontline workforce with digital tools.',
+  title: 'Soluciones de Producción | Vesica Connected Worker®',
+  description: 'Optimiza los flujos de trabajo de producción, aumenta el rendimiento y empodera a tu fuerza laboral de primera línea con herramientas digitales.',
 }
 
 const benefits = [
   {
-    title: 'Streamline Production Workflows',
-    desc: 'In today\'s increasingly competitive global marketplace, the right digital approach propels production levels to new heights. Equip your workforce with best-in-class tools to get the job done right, every time.',
+    title: 'Optimiza los Flujos de Trabajo de Producción',
+    desc: 'En el mercado global cada vez más competitivo de hoy, el enfoque digital adecuado impulsa los niveles de producción a nuevas alturas. Equipa a tu fuerza laboral con las mejores herramientas para hacer el trabajo correctamente, cada vez.',
   },
   {
-    title: 'Empower Workers, Accelerate Gains',
-    desc: 'Connected work turns frontline workers into engaged problem-solvers while providing plant and line managers the insights they need to optimize operations and execute work better.',
+    title: 'Empodera Trabajadores, Acelera Ganancias',
+    desc: 'El trabajo conectado convierte a los trabajadores de primera línea en solucionadores de problemas comprometidos, mientras proporciona a los gerentes de planta y línea las perspectivas que necesitan para optimizar las operaciones y ejecutar mejor el trabajo.',
   },
   {
-    title: 'Embed Efficiencies Into the Process',
-    desc: 'With interactive digital SOPs, workers have immediate access to guidance on how to best execute their tasks. Data points they capture trigger the next task — efficiencies are baked in.',
+    title: 'Integra Eficiencias en el Proceso',
+    desc: 'Con POE digitales interactivos, los trabajadores tienen acceso inmediato a orientación sobre cómo ejecutar mejor sus tareas. Los datos que capturan activan la siguiente tarea — las eficiencias están integradas.',
   },
 ]
 
 const stats = [
-  { value: '5%', label: 'Increase in OEE' },
-  { value: '60%', label: 'Faster worker onboarding' },
-  { value: '35%', label: 'Improvement in quality metrics' },
+  { value: '5%', label: 'Aumento en OEE' },
+  { value: '60%', label: 'Incorporación más rápida de trabajadores' },
+  { value: '35%', label: 'Mejora en métricas de calidad' },
 ]
 
 export default function ProductionPage() {
@@ -35,35 +35,37 @@ export default function ProductionPage() {
 
       <section className="solution-hero">
         <div className="solution-hero-inner">
-          <div className="section-tag">Production Solutions</div>
-          <h1 className="solution-hero-title">A Smarter Strategy for Driving Productivity</h1>
+          <div className="section-tag">Soluciones de Producción</div>
+          <h1 className="solution-hero-title">Una Estrategia más Inteligente para Impulsar la Productividad</h1>
           <p className="solution-hero-desc">
-            Accelerate production gains and reduce bottlenecks across your operations without
-            compromising quality or safety. Vesica gives your frontline teams the digital tools
-            they need to work faster, smarter, and more efficiently.
+            Acelera las ganancias de producción y reduce los cuellos de botella en todas tus
+            operaciones sin comprometer la calidad ni la seguridad. Vesica brinda a tus equipos
+            de primera línea las herramientas digitales para trabajar más rápido, más inteligente
+            y más eficientemente.
           </p>
-          <a href="/demo" className="btn-hero-primary">Request a Demo</a>
+          <a href="/demo" className="btn-hero-primary">Solicitar una Demo</a>
         </div>
       </section>
 
       <section className="solution-quote-section">
         <div className="solution-quote-inner">
           <blockquote className="solution-blockquote">
-            &ldquo;The digital world that we&apos;re in now — and Vesica plays in this world — is
-            our next major leap in manufacturing that really is going to change productivity for
-            the industrial worker.&rdquo;
+            &ldquo;El mundo digital en el que estamos ahora — y Vesica juega en este mundo — es
+            nuestro próximo gran salto en la manufactura que realmente va a cambiar la
+            productividad del trabajador industrial.&rdquo;
           </blockquote>
-          <p className="solution-quote-author">Vice President, Engineering and Process Technology</p>
-          <p className="solution-quote-company">Leading Chemical Manufacturer</p>
+          <p className="solution-quote-author">Vicepresidente, Ingeniería y Tecnología de Procesos</p>
+          <p className="solution-quote-company">Fabricante Químico Líder</p>
         </div>
       </section>
 
       <section className="solution-benefits">
         <div className="solution-benefits-inner">
-          <h2 className="section-title">From Floor to C-Suite Visibility</h2>
+          <h2 className="section-title">Visibilidad del Piso a la Dirección</h2>
           <p className="section-sub" style={{ maxWidth: '620px' }}>
-            Transform your production operations with real-time data capture, guided work
-            instructions, and actionable insights at every level of your organization.
+            Transforma tus operaciones de producción con captura de datos en tiempo real,
+            instrucciones de trabajo guiadas e información procesable en todos los niveles
+            de tu organización.
           </p>
           <div className="solution-benefits-grid">
             {benefits.map((b) => (
@@ -90,28 +92,31 @@ export default function ProductionPage() {
       <section className="solution-detail">
         <div className="solution-detail-inner">
           <div className="solution-detail-text">
-            <h2>Empowering Workers, Accelerating Gains</h2>
+            <h2>Empoderando Trabajadores, Acelerando Ganancias</h2>
             <p>
-              Accelerate production gains and reduce bottlenecks across your operations without
-              compromising quality or safety. Connected work turns frontline workers into engaged
-              problem-solvers while providing plant and line managers the insights they need.
+              Acelera las ganancias de producción y reduce los cuellos de botella en todas tus
+              operaciones sin comprometer la calidad ni la seguridad. El trabajo conectado
+              convierte a los trabajadores de primera línea en solucionadores de problemas
+              comprometidos, mientras proporciona a los gerentes de planta y línea las
+              perspectivas que necesitan.
             </p>
             <p>
-              With interactive, digital SOPs, workers have immediate, easy access to guidance on
-              how to best execute their respective tasks. The data points they capture trigger
-              the next task. Efficiencies are baked in; production growth, too.
+              Con POE digitales interactivos, los trabajadores tienen acceso inmediato y fácil a
+              la orientación sobre cómo ejecutar mejor sus respectivas tareas. Los datos que
+              capturan activan la siguiente tarea. Las eficiencias están integradas; el
+              crecimiento de la producción también.
             </p>
           </div>
           <div className="solution-detail-visual">
             <div className="solution-visual-card">
               <div className="solution-visual-icon">⚡</div>
-              <h4>Increased Throughput</h4>
-              <p>Reduce changeover times and eliminate production bottlenecks with guided digital workflows.</p>
+              <h4>Mayor Rendimiento</h4>
+              <p>Reduce los tiempos de cambio y elimina los cuellos de botella de producción con flujos de trabajo digitales guiados.</p>
             </div>
             <div className="solution-visual-card">
               <div className="solution-visual-icon">✅</div>
-              <h4>Quality Assurance</h4>
-              <p>Embed quality checks directly into production workflows to catch defects at the source.</p>
+              <h4>Aseguramiento de Calidad</h4>
+              <p>Integra controles de calidad directamente en los flujos de trabajo de producción para detectar defectos en la fuente.</p>
             </div>
           </div>
         </div>

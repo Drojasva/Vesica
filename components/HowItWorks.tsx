@@ -4,20 +4,20 @@ import { useState } from 'react'
 
 const steps = [
   {
-    title: 'Build Your Digital SOPs',
-    desc: 'Use our no-code editor to convert existing procedures into rich digital work instructions — fast. Include photos, videos, and decision logic.',
+    title: 'Crea tus POE Digitales',
+    desc: 'Usa nuestro editor sin código para convertir procedimientos existentes en instrucciones de trabajo digitales enriquecidas — rápido. Incluye fotos, videos y lógica de decisión.',
   },
   {
-    title: 'Deploy to Your Workers',
-    desc: 'Publish to your frontline teams instantly on any device. Workers see exactly what they need, when they need it — even offline.',
+    title: 'Despliega a tus Trabajadores',
+    desc: 'Publica para tus equipos de primera línea al instante en cualquier dispositivo. Los trabajadores ven exactamente lo que necesitan, cuando lo necesitan — incluso sin conexión.',
   },
   {
-    title: 'Capture Structured Data',
-    desc: 'Every task completed generates rich operational data — from inspection results to anomaly reports — structured and ready for analysis.',
+    title: 'Captura Datos Estructurados',
+    desc: 'Cada tarea completada genera datos operativos enriquecidos — desde resultados de inspección hasta informes de anomalías — estructurados y listos para el análisis.',
   },
   {
-    title: 'Drive Continuous Improvement',
-    desc: 'Use real-time dashboards and analytics to identify bottlenecks, reduce variation, and keep your operations running at peak performance.',
+    title: 'Impulsa la Mejora Continua',
+    desc: 'Usa paneles y análisis en tiempo real para identificar cuellos de botella, reducir la variación y mantener tus operaciones funcionando al máximo rendimiento.',
   },
 ]
 
@@ -27,18 +27,18 @@ export default function HowItWorks() {
   return (
     <section className="how">
       <div className="how-content">
-        <div className="section-tag">How It Works</div>
-        <h2 className="section-title">From Paper to Digital in Weeks, Not Months</h2>
+        <div className="section-tag">Cómo Funciona</div>
+        <h2 className="section-title">Del Papel a lo Digital en Semanas, No Meses</h2>
         <p className="section-sub">
-          Vesica is designed for rapid deployment with minimal IT overhead. Get your frontline
-          teams up and running fast.
+          Vesica está diseñado para una implementación rápida con mínima inversión en TI.
+          Pon a tus equipos de primera línea en marcha rápidamente.
         </p>
         <a
           href="/demo"
           className="btn-primary"
           style={{ display: 'inline-block', marginTop: '10px', padding: '12px 26px', borderRadius: '8px', fontSize: '15px' }}
         >
-          See How It Works →
+          Ver Cómo Funciona →
         </a>
       </div>
       <div className="how-steps">

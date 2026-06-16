@@ -12,8 +12,8 @@ export default function ProductPage() {
       <section className={styles.productHero}>
         <div className={styles.container}>
           <div>
-            <h1>Connected Worker<sup>®</sup><br /><span>Production Workflow Software</span></h1>
-            <p>A smarter strategy for driving productivity.</p>
+            <h1>Connected Worker<sup>®</sup><br /><span>Software de Flujo de Trabajo para Producción</span></h1>
+            <p>Una estrategia más inteligente para impulsar la productividad.</p>
           </div>
         </div>
       </section>
@@ -23,12 +23,12 @@ export default function ProductPage() {
         <div className={`${styles.container} ${styles.productFeatureGrid}`}>
           <div>
             <div className={styles.imageContainerSquare}>
-              <Image src="/tableta.png" alt="Tablet Workflow" fill className={styles.objectCover} />
+              <Image src="/tableta.png" alt="Flujo de Trabajo en Tablet" fill className={styles.objectCover} />
             </div>
           </div>
           <div className={styles.productFeatureText}>
-            <h2>Streamline production for increased throughput</h2>
-            <p>In today's increasingly competitive global marketplace, the right digital approach can propel your production levels to new heights. Start by equipping your workforce with the best-in-class tools and support it needs to get the job done right, every time.</p>
+            <h2>Optimiza la producción para aumentar el rendimiento</h2>
+            <p>En el mercado global cada vez más competitivo de hoy, el enfoque digital adecuado puede impulsar tus niveles de producción a nuevas alturas. Comienza equipando a tu fuerza laboral con las mejores herramientas y el soporte que necesita para hacer el trabajo correctamente, cada vez.</p>
           </div>
         </div>
       </section>
@@ -37,11 +37,11 @@ export default function ProductPage() {
       <section className={styles.productQuote}>
         <div className={styles.container}>
           <blockquote>
-            "The digital world that we're in now – and Parsable plays in this world – is our next major leap in manufacturing that really is going to change productivity for the American worker that we haven't seen in 40 years."
+            "El mundo digital en el que estamos ahora – y Vesica juega en este mundo – es nuestro próximo gran salto en la manufactura que realmente va a cambiar la productividad del trabajador industrial como no se ha visto en 40 años."
           </blockquote>
           <div>
-            <p className={styles.authorRole}>Vice President, Engineering and Process Technology</p>
-            <p className={styles.authorCompany}>ChampionX</p>
+            <p className={styles.authorRole}>Vicepresidente, Ingeniería y Tecnología de Procesos</p>
+            <p className={styles.authorCompany}>Fabricante Químico Líder</p>
           </div>
         </div>
       </section>
@@ -51,13 +51,13 @@ export default function ProductPage() {
         <div className={`${styles.container} ${styles.productFeatureGrid}`}>
           <div>
             <div className={styles.imageContainerWide}>
-              <Image src="/dashboard.png" alt="Dashboard Workflow" fill className={styles.objectContain} />
+              <Image src="/dashboard.png" alt="Panel de Operaciones" fill className={styles.objectContain} />
             </div>
           </div>
           <div className={styles.productFeatureText}>
-            <h2>Empowering workers, accelerating gains</h2>
-            <p>Accelerate production gains and reduce bottlenecks across your operations without compromising quality or safety. Connected work turns frontline workers into engaged problem-solvers while providing plant and line managers the insights they need to optimize operations and execute work better.</p>
-            <a href="#" className={styles.btnProductPrimary}>Get a Demo</a>
+            <h2>Empoderando trabajadores, acelerando ganancias</h2>
+            <p>Acelera las ganancias de producción y reduce los cuellos de botella en todas tus operaciones sin comprometer la calidad ni la seguridad. El trabajo conectado convierte a los trabajadores de primera línea en solucionadores de problemas comprometidos, mientras proporciona a los gerentes de planta y línea las perspectivas que necesitan para optimizar las operaciones y ejecutar mejor el trabajo.</p>
+            <a href="#" className={styles.btnProductPrimary}>Solicitar una Demo</a>
           </div>
         </div>
       </section>
@@ -66,13 +66,13 @@ export default function ProductPage() {
       <section className={styles.productFeature}>
         <div className={`${styles.container} ${styles.productFeatureGrid}`}>
           <div className={styles.productFeatureText}>
-            <h2>Embedding efficiencies into the process</h2>
-            <p>With interactive, digital SOPs, workers have immediate, easy access to the guidance on how to best execute their respective tasks. The data points they capture, such as inspection results, trigger the next task. Efficiencies are baked in; production growth, too.</p>
-            <a href="#" className={styles.btnProductPrimary}>Read Customer Story</a>
+            <h2>Incorporando eficiencias en el proceso</h2>
+            <p>Con POE digitales interactivos, los trabajadores tienen acceso inmediato y fácil a la orientación sobre cómo ejecutar mejor sus respectivas tareas. Los datos que capturan, como los resultados de inspección, activan la siguiente tarea. Las eficiencias están integradas; el crecimiento de la producción también.</p>
+            <a href="#" className={styles.btnProductPrimary}>Leer Caso de Éxito</a>
           </div>
           <div>
             <div className={styles.imageContainerWide}>
-              <Image src="/celular.png" alt="Mobile Efficiency" fill className={styles.objectContain} />
+              <Image src="/celular.png" alt="Eficiencia Móvil" fill className={styles.objectContain} />
             </div>
           </div>
         </div>
@@ -81,14 +81,14 @@ export default function ProductPage() {
       {/* Get Started Section */}
       <section className={styles.getStartedSection}>
         <div className={styles.container}>
-          <span className={styles.getStartedTag}>Get Started</span>
-          <h2 className={styles.getStartedHeading}>Welcome to your digital future</h2>
+          <span className={styles.getStartedTag}>Comienza Ahora</span>
+          <h2 className={styles.getStartedHeading}>Bienvenido a tu futuro digital</h2>
           <p className={styles.getStartedText}>
-            Schedule a custom demo and have an expert show you how Parsable works.
+            Agenda una demo personalizada y un experto te mostrará cómo funciona Vesica.
           </p>
           <div className={styles.getStartedBtns}>
-            <a href="#" className={styles.btnOutline}>Get Started</a>
-            <a href="#" className={styles.btnFilled}>Book a Demo</a>
+            <a href="#" className={styles.btnOutline}>Comenzar</a>
+            <a href="#" className={styles.btnFilled}>Agendar Demo</a>
           </div>
         </div>
       </section>

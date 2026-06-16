@@ -1,34 +1,34 @@
 const testimonials = [
   {
-    text: '"Vesica has transformed how our frontline teams work. We eliminated paper entirely and our quality metrics improved by over 35% within the first six months."',
+    text: '"Vesica ha transformado la forma en que nuestros equipos de primera línea trabajan. Eliminamos el papel por completo y nuestros indicadores de calidad mejoraron en más de un 35% durante los primeros seis meses."',
     initials: 'JR',
     avatarClass: 'av-1',
-    name: 'James Rodriguez',
-    role: 'VP Operations · Global Beverage Co.',
+    name: 'James Rodríguez',
+    role: 'VP de Operaciones · Global Beverage Co.',
   },
   {
-    text: '"The speed at which we could digitize our SOPs was remarkable. Our safety incident rate dropped to zero within the first quarter of deployment."',
+    text: '"La velocidad con la que pudimos digitalizar nuestros POE fue notable. Nuestra tasa de incidentes de seguridad se redujo a cero durante el primer trimestre de implementación."',
     initials: 'SK',
     avatarClass: 'av-2',
     name: 'Sarah Kim',
-    role: 'Director of EHS · Chemical Manufacturer',
+    role: 'Directora de EHS · Fabricante Químico',
   },
   {
-    text: '"Our new workers are fully productive in half the time compared to before Vesica. The guided instructions make onboarding incredibly efficient."',
+    text: '"Nuestros nuevos trabajadores son completamente productivos en la mitad del tiempo en comparación con antes de Vesica. Las instrucciones guiadas hacen que la incorporación sea increíblemente eficiente."',
     initials: 'MT',
     avatarClass: 'av-3',
     name: 'Marco Torres',
-    role: 'Plant Manager · Food Processing Corp.',
+    role: 'Gerente de Planta · Corporación de Procesamiento de Alimentos',
   },
 ]
 
 export default function Testimonials() {
   return (
     <section className="testimonials">
-      <div className="section-tag">Customer Stories</div>
-      <h2 className="section-title">What Our Customers Say</h2>
+      <div className="section-tag">Casos de Éxito</div>
+      <h2 className="section-title">Lo Que Dicen Nuestros Clientes</h2>
       <p className="section-sub">
-        Leading industrial companies trust Vesica to run their most critical operations.
+        Empresas industriales líderes confían en Vesica para gestionar sus operaciones más críticas.
       </p>
       <div className="testi-grid">
         {testimonials.map((t) => (
