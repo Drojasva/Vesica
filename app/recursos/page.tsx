@@ -109,100 +109,54 @@ export default function RecursosPage() {
         <div className="servicios-accelerate-inner">
           <h2>Nuestro equipo de Servicios acelerará tu éxito con Vesica.</h2>
 
-          <div className="servicios-split">
-            <div className="servicios-split-content">
-              <h3>Hazte digital más rápido</h3>
-              <p>
-                Nuestros expertos en Servicios pueden impulsar tu transición del papel al móvil
-                primero en la fábrica, construyendo la base digital necesaria para futuros
-                proyectos de transformación digital.
-              </p>
-            </div>
-            <div className="servicios-split-visual">
-              <div className="servicio-phone-mockup">
-                <div className="phone-notch"></div>
-                <div className="phone-screen">
-                  <div className="phone-header">
-                    <span className="phone-back">← Back to Step List</span>
-                  </div>
-                  <div className="phone-field">
-                    <label>Comments</label>
-                    <div className="phone-input">no issues</div>
-                  </div>
-                  <button className="phone-btn-outline">Raise Procedural Issue</button>
-                  <div className="phone-btn-row">
-                    <button className="phone-btn-outline-sm">Options</button>
-                    <button className="phone-btn-filled">Complete Step</button>
-                  </div>
-                </div>
+          <div className="servicios-modern-grid">
+            <div className="servicios-modern-card">
+              <div className="servicios-modern-img-wrapper">
+                <img src="/celular.png" alt="Digitalización móvil" className="servicios-modern-img" />
+                <div className="servicios-modern-overlay"></div>
+              </div>
+              <div className="servicios-modern-content">
+                <span className="servicios-modern-tag">01</span>
+                <h3>Hazte digital más rápido</h3>
+                <p>
+                  Nuestros expertos en Servicios pueden impulsar tu transición del papel al móvil
+                  primero en la fábrica, construyendo la base digital necesaria para futuros
+                  proyectos de transformación digital.
+                </p>
               </div>
             </div>
-          </div>
 
-          <div className="servicios-split servicios-split-reverse">
-            <div className="servicios-split-content">
-              <h3>Conecta a tus trabajadores para mejorar la seguridad, la calidad y la productividad</h3>
-              <p>
-                Acorta el tiempo de acción —y los resultados— con expertos listos para permitir
-                la colaboración en tiempo real de Vesica entre los trabajadores de primera línea y
-                las personas, sistemas, información y máquinas que necesitan para dar lo mejor de
-                sí mismos.
-              </p>
-            </div>
-            <div className="servicios-split-visual">
-              <div className="servicio-laptop-mockup">
-                <div className="laptop-screen">
-                  <div className="dashboard-mini">
-                    <div className="dash-stat"><span className="dash-num">88</span><span className="dash-label">Service Orders</span></div>
-                    <div className="dash-stat"><span className="dash-num">17</span><span className="dash-label">New Issues</span></div>
-                    <div className="dash-stat"><span className="dash-num">4</span><span className="dash-label">Overdue</span></div>
-                    <div className="dash-stat"><span className="dash-num">24</span><span className="dash-label">Pending</span></div>
-                  </div>
-                  <div className="dashboard-chart">
-                    <div className="chart-bar" style={{ height: '40%' }}></div>
-                    <div className="chart-bar" style={{ height: '65%' }}></div>
-                    <div className="chart-bar" style={{ height: '50%' }}></div>
-                    <div className="chart-bar" style={{ height: '80%' }}></div>
-                    <div className="chart-bar" style={{ height: '55%' }}></div>
-                    <div className="chart-bar" style={{ height: '70%' }}></div>
-                    <div className="chart-bar" style={{ height: '45%' }}></div>
-                    <div className="chart-bar" style={{ height: '60%' }}></div>
-                  </div>
-                </div>
+            <div className="servicios-modern-card">
+              <div className="servicios-modern-img-wrapper">
+                <img src="/dashboard.png" alt="Dashboard de conectividad" className="servicios-modern-img" />
+                <div className="servicios-modern-overlay"></div>
+              </div>
+              <div className="servicios-modern-content">
+                <span className="servicios-modern-tag">02</span>
+                <h3>Conecta a tus trabajadores para mejorar la seguridad, la calidad y la productividad</h3>
+                <p>
+                  Acorta el tiempo de acción —y los resultados— con expertos listos para permitir
+                  la colaboración en tiempo real de Vesica entre los trabajadores de primera línea y
+                  las personas, sistemas, información y máquinas que necesitan para dar lo mejor de
+                  sí mismos.
+                </p>
               </div>
             </div>
-          </div>
 
-          <div className="servicios-split">
-            <div className="servicios-split-content">
-              <h3>Escala tu nueva solución digital para trabajadores de primera línea</h3>
-              <p>
-                Una vez que hayas conectado a Vesica, nuestros expertos en Servicios estarán listos
-                para extenderse rápida y eficientemente a los trabajadores de primera línea en tus
-                fábricas en todo el mundo, sin importar el tamaño o la ubicación, desbloqueando
-                nuevos conocimientos para impulsar la excelencia operativa a gran escala.
-              </p>
-            </div>
-            <div className="servicios-split-visual">
-              <div className="servicio-laptop-mockup">
-                <div className="laptop-screen">
-                  <div className="dashboard-mini">
-                    <div className="dash-stat"><span className="dash-num">108</span><span className="dash-label">Completed Today</span></div>
-                    <div className="dash-stat"><span className="dash-num">42</span><span className="dash-label">In Progress</span></div>
-                    <div className="dash-stat"><span className="dash-num">370</span><span className="dash-label">Total Active</span></div>
-                    <div className="dash-stat"><span className="dash-num">25</span><span className="dash-label">Compliance Rate</span></div>
-                  </div>
-                  <div className="dashboard-chart">
-                    <div className="chart-bar" style={{ height: '55%' }}></div>
-                    <div className="chart-bar" style={{ height: '75%' }}></div>
-                    <div className="chart-bar" style={{ height: '60%' }}></div>
-                    <div className="chart-bar" style={{ height: '90%' }}></div>
-                    <div className="chart-bar" style={{ height: '45%' }}></div>
-                    <div className="chart-bar" style={{ height: '85%' }}></div>
-                    <div className="chart-bar" style={{ height: '65%' }}></div>
-                    <div className="chart-bar" style={{ height: '50%' }}></div>
-                  </div>
-                </div>
+            <div className="servicios-modern-card">
+              <div className="servicios-modern-img-wrapper">
+                <img src="/tableta.png" alt="Escala global" className="servicios-modern-img" />
+                <div className="servicios-modern-overlay"></div>
+              </div>
+              <div className="servicios-modern-content">
+                <span className="servicios-modern-tag">03</span>
+                <h3>Escala tu nueva solución digital para trabajadores de primera línea</h3>
+                <p>
+                  Una vez que hayas conectado a Vesica, nuestros expertos en Servicios estarán listos
+                  para extenderse rápida y eficientemente a los trabajadores de primera línea en tus
+                  fábricas en todo el mundo, sin importar el tamaño o la ubicación, desbloqueando
+                  nuevos conocimientos para impulsar la excelencia operativa a gran escala.
+                </p>
               </div>
             </div>
           </div>
