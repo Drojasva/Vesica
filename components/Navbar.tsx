@@ -14,7 +14,7 @@ const solutions = [
 const navLinks = [
   { label: 'Industrias', href: '#' },
   { label: 'Recursos', href: '/recursos' },
-  { label: 'Empresa', href: '#' },
+  { label: 'Empresa', href: '/empresa' },
 ]
 
 export default function Navbar() {
