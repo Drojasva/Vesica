@@ -908,28 +908,6 @@ footer { background: #060e1d; color: #8aa4c6; padding: 60px 5% 30px; }
 .footer-bottom a:hover { color: #fff; }
 
 /* ── SERVICIOS / RECURSOS PAGE ── */
-.servicios-hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--blue-mid) 100%);
-  color: #fff;
-  padding: 100px 5% 80px;
-  text-align: center;
-}
-.servicios-hero-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
-.servicios-hero h1 {
-  font-size: clamp(28px, 3.5vw, 42px);
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
-}
-.servicios-hero p {
-  font-size: 17px;
-  color: #b8c8e0;
-  line-height: 1.7;
-}
 
 .servicios-grid-section {
   padding: 80px 5%;
@@ -1045,12 +1023,6 @@ footer { background: #060e1d; color: #8aa4c6; padding: 60px 5% 30px; }
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.servicios-modern-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .servicios-modern-img-wrapper {
@@ -1064,11 +1036,6 @@ footer { background: #060e1d; color: #8aa4c6; padding: 60px 5% 30px; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.servicios-modern-card:hover .servicios-modern-img {
-  transform: scale(1.05);
 }
 
 .servicios-modern-overlay {

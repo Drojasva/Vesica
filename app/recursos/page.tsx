@@ -73,13 +73,20 @@ export default function RecursosPage() {
     <>
       <Navbar />
 
-      <section className="servicios-hero">
-        <div className="servicios-hero-inner">
-          <h1>Servicios profesionales de Transformación Digital y Mejora Continua</h1>
-          <p>
-            Estás ocupado y tu equipo está saturado. Los expertos en análisis sintáctico están aquí
-            para acelerar tu implementación, ayudándote a alcanzar tus objetivos aún más rápido.
-          </p>
+      <section className="solution-hero">
+        <div className="solution-hero-inner solution-hero-split">
+          <div className="solution-hero-copy">
+            <div className="section-tag">Servicios</div>
+            <h1 className="solution-hero-title">Servicios profesionales de Transformación Digital y Mejora Continua</h1>
+            <p className="solution-hero-desc">
+              Estás ocupado y tu equipo está saturado. Los expertos en análisis sintáctico están aquí
+              para acelerar tu implementación, ayudándote a alcanzar tus objetivos aún más rápido.
+            </p>
+            <a href="/demo" className="btn-hero-primary">Solicitar una Demo</a>
+          </div>
+          <div className="solution-hero-art">
+            <img src="/quality-inspection.svg" alt="Servicios de transformación digital" />
+          </div>
         </div>
       </section>
 

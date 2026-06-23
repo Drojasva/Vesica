@@ -1,11 +1,15 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { Turnstile } from '@marsidev/react-turnstile'
+
+const TURNSTILE_SITE_KEY = '0x4AAAAADpaZUvTZgXyWGmj'
 
 const employeeOptions = ['1-50', '51-200', '201-500', '501-1.000', '1.000+']
 
 export default function DemoForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -27,6 +31,11 @@ export default function DemoForm() {
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
+    if (!captchaToken) {
+      alert('Por favor completa la verificación de seguridad.')
+      return
+    }
+    // TODO: Enviar captchaToken al backend para validarlo con Cloudflare
     setSubmitted(true)
   }
 
@@ -118,6 +127,13 @@ export default function DemoForm() {
               <div className="form-group">
                 <label htmlFor="message">Mensaje</label>
                 <textarea id="message" name="message" rows={4} value={form.message} onChange={handleChange} placeholder="Cuéntanos sobre tu caso de uso o cualquier consulta específica..." />
+              </div>
+              <div className="form-group" style={{ display: 'flex', justifyContent: 'center' }}>
+                <Turnstile
+                  siteKey={TURNSTILE_SITE_KEY}
+                  onSuccess={(token) => setCaptchaToken(token)}
+                  onExpire={() => setCaptchaToken(null)}
+                />
               </div>
               <button type="submit" className="btn-demo-submit">Solicitar Demo</button>
               <p className="demo-disclaimer">Al enviar, aceptas nuestra Política de Privacidad. Sin spam, nunca.</p>
