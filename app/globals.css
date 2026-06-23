@@ -827,28 +827,6 @@ footer { background: #060e1d; color: #8aa4c6; padding: 60px 5% 30px; }
 .footer-bottom a:hover { color: #fff; }
 
 /* ── SERVICIOS / RECURSOS PAGE ── */
-.servicios-hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--blue-mid) 100%);
-  color: #fff;
-  padding: 100px 5% 80px;
-  text-align: center;
-}
-.servicios-hero-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
-.servicios-hero h1 {
-  font-size: clamp(28px, 3.5vw, 42px);
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
-}
-.servicios-hero p {
-  font-size: 17px;
-  color: #b8c8e0;
-  line-height: 1.7;
-}
 
 .servicios-grid-section {
   padding: 80px 5%;
