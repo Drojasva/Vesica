@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-hidden="true">
+  <!-- Geometric monogram: interlocking D/S structure -->
+  <path
+    stroke="currentColor"
+    stroke-width="5"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+    d="M14 12h24c10 0 16 6 16 16s-6 16-16 16H26"
+  />
+  <path
+    stroke="currentColor"
+    stroke-width="5"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+    d="M50 52H26c-10 0-16-6-16-16s6-16 16-16h12"
+  />
+  <path
+    stroke="currentColor"
+    stroke-width="5"
+    stroke-linecap="square"
+    d="M26 28h16M22 36h16"
+  />
+</svg>

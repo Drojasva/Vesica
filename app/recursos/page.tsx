@@ -1,10 +1,11 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
+import Image from 'next/image'
 
 export const metadata = {
-  title: 'Servicios | Vesica Connected Worker®',
-  description: 'Servicios profesionales de Transformación Digital y Mejora Continua. Acelera tu implementación con expertos en análisis sintáctico.',
+  title: 'Servicios',
+  description: 'Servicios profesionales de transformación digital y mejora continua de DevSolution SpA. Acelera tu implementación con un equipo experto.',
 }
 
 const serviceCategories = [
@@ -38,7 +39,7 @@ const serviceCategories = [
   },
   {
     title: 'Servicios de integración:',
-    subtitle: 'Integra Vesica con tu pila tecnológica existente',
+    subtitle: 'Integra DevSolution con tu pila tecnológica existente',
     items: ['Arquitectura de soluciones', 'Soporte para API', 'Trabajo de desarrollo', 'Desarrollo personalizado'],
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,8 +85,14 @@ export default function RecursosPage() {
             </p>
             <a href="/demo" className="btn-hero-primary">Solicitar una Demo</a>
           </div>
-          <div className="solution-hero-art">
-            <img src="/quality-inspection.svg" alt="Servicios de transformación digital" />
+          <div className="solution-hero-art" style={{ position: 'relative', width: '100%', minHeight: '320px' }}>
+            <Image
+              src="/quality-inspection.svg"
+              alt="Servicios de transformación digital"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority
+            />
           </div>
         </div>
       </section>
@@ -114,12 +121,18 @@ export default function RecursosPage() {
 
       <section className="servicios-accelerate">
         <div className="servicios-accelerate-inner">
-          <h2>Nuestro equipo de Servicios acelerará tu éxito con Vesica.</h2>
+          <h2>Nuestro equipo de Servicios acelerará tu éxito con DevSolution.</h2>
 
           <div className="servicios-modern-grid">
             <div className="servicios-modern-card">
               <div className="servicios-modern-img-wrapper">
-                <img src="/celular.png" alt="Digitalización móvil" className="servicios-modern-img" />
+                <Image
+                  src="/celular.png"
+                  alt="Digitalización móvil"
+                  fill
+                  className="servicios-modern-img"
+                  style={{ objectFit: 'cover' }}
+                />
                 <div className="servicios-modern-overlay"></div>
               </div>
               <div className="servicios-modern-content">
@@ -135,7 +148,13 @@ export default function RecursosPage() {
 
             <div className="servicios-modern-card">
               <div className="servicios-modern-img-wrapper">
-                <img src="/dashboard.png" alt="Dashboard de conectividad" className="servicios-modern-img" />
+                <Image
+                  src="/dashboard.png"
+                  alt="Dashboard de conectividad"
+                  fill
+                  className="servicios-modern-img"
+                  style={{ objectFit: 'cover' }}
+                />
                 <div className="servicios-modern-overlay"></div>
               </div>
               <div className="servicios-modern-content">
@@ -143,7 +162,7 @@ export default function RecursosPage() {
                 <h3>Conecta a tus trabajadores para mejorar la seguridad, la calidad y la productividad</h3>
                 <p>
                   Acorta el tiempo de acción —y los resultados— con expertos listos para permitir
-                  la colaboración en tiempo real de Vesica entre los trabajadores de primera línea y
+                  la colaboración en tiempo real de DevSolution entre los trabajadores de primera línea y
                   las personas, sistemas, información y máquinas que necesitan para dar lo mejor de
                   sí mismos.
                 </p>
@@ -152,14 +171,20 @@ export default function RecursosPage() {
 
             <div className="servicios-modern-card">
               <div className="servicios-modern-img-wrapper">
-                <img src="/tableta.png" alt="Escala global" className="servicios-modern-img" />
+                <Image
+                  src="/tableta.png"
+                  alt="Escala global"
+                  fill
+                  className="servicios-modern-img"
+                  style={{ objectFit: 'cover' }}
+                />
                 <div className="servicios-modern-overlay"></div>
               </div>
               <div className="servicios-modern-content">
                 <span className="servicios-modern-tag">03</span>
                 <h3>Escala tu nueva solución digital para trabajadores de primera línea</h3>
                 <p>
-                  Una vez que hayas conectado a Vesica, nuestros expertos en Servicios estarán listos
+                  Una vez que hayas conectado a DevSolution, nuestros expertos en Servicios estarán listos
                   para extenderse rápida y eficientemente a los trabajadores de primera línea en tus
                   fábricas en todo el mundo, sin importar el tamaño o la ubicación, desbloqueando
                   nuevos conocimientos para impulsar la excelencia operativa a gran escala.
@@ -173,13 +198,13 @@ export default function RecursosPage() {
       <section className="servicios-testimonial">
         <div className="servicios-testimonial-inner">
           <blockquote>
-            &ldquo;El equipo de éxito del cliente de Vesica ha proporcionado una orientación informada
-            y perspicaz sobre cómo utilizar Vesica en nuestros programas de calidad y seguridad. Su
+            &ldquo;El equipo de éxito del cliente de DevSolution ha proporcionado una orientación informada
+            y perspicaz sobre cómo utilizar DevSolution en nuestros programas de calidad y seguridad. Su
             enfoque en resultados rápidos y adopción rápida es fundamental en un momento en que el
             mercado se mueve tan rápido y necesitamos ser más ágiles que nunca.&rdquo;
           </blockquote>
           <p className="testimonial-author">Todd Wing</p>
-          <p className="testimonial-role">Responsable de Ingeniería de Fabricación, Southern Motion</p>
+          <p className="testimonial-role">Responsable de Ingeniería de Fabricación</p>
         </div>
       </section>
 

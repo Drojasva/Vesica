@@ -1,10 +1,11 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
+import Image from 'next/image'
 
 export const metadata = {
-  title: 'Soluciones de Seguridad | Vesica Connected Worker®',
-  description: 'Digitaliza tus programas de seguridad para proteger a tu fuerza laboral, garantizar el cumplimiento normativo y prevenir incidentes antes de que ocurran.',
+  title: 'Soluciones de Seguridad',
+  description: 'Digitaliza tus programas de seguridad con DevSolution SpA para proteger a tu fuerza laboral, garantizar el cumplimiento normativo y prevenir incidentes.',
 }
 
 const useCases = [
@@ -68,8 +69,14 @@ export default function SafetyPage() {
             </p>
             <a href="/demo" className="btn-hero-primary">Solicitar una Demo</a>
           </div>
-          <div className="solution-hero-art">
-            <img src="/safety-operations.svg" alt="Panel digital de seguridad industrial" />
+          <div className="solution-hero-art" style={{ position: 'relative', width: '100%', minHeight: '320px' }}>
+            <Image
+              src="/safety-operations.svg"
+              alt="Panel digital de seguridad industrial"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority
+            />
           </div>
         </div>
       </section>
@@ -90,7 +97,7 @@ export default function SafetyPage() {
         <div className="solution-use-cases-inner">
           <h2 className="section-title">Casos de Uso de Seguridad</h2>
           <p className="section-sub" style={{ maxWidth: '620px' }}>
-            Desde procedimientos LOTO hasta reportes de cuasi-incidentes, Vesica digitaliza
+            Desde procedimientos LOTO hasta reportes de cuasi-incidentes, DevSolution digitaliza
             cada aspecto de tu programa de seguridad industrial.
           </p>
           <div className="solution-use-cases-grid">
@@ -144,7 +151,7 @@ export default function SafetyPage() {
               los procedimientos con mayor consistencia.
             </p>
             <p>
-              Vesica conecta cada procedimiento de seguridad con datos accionables, permitiendo
+              DevSolution conecta cada procedimiento de seguridad con datos accionables, permitiendo
               a los líderes identificar tendencias, cerrar brechas de cumplimiento y demostrar
               mejora continua ante auditores y reguladores.
             </p>

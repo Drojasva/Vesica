@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
 
 export const metadata = {
-  title: 'Soluciones de Mantenimiento | Vesica Connected Worker®',
-  description: 'Equipa a tus equipos de mantenimiento con herramientas digitales modernas para gestionar y mejorar continuamente los procesos de trabajo.',
+  title: 'Soluciones de Mantenimiento',
+  description: 'Equipa a tus equipos de mantenimiento con herramientas digitales modernas de DevSolution SpA para gestionar y mejorar continuamente los procesos de trabajo.',
 }
 
 const benefits = [
@@ -14,7 +14,7 @@ const benefits = [
   },
   {
     title: 'Visibilidad del Trabajo en Tiempo Real',
-    desc: 'Los sistemas actuales registran el "qué" y el "cuándo" de los errores de las máquinas, pero omiten el "por qué". Vesica captura cómo se realiza realmente el trabajo, brindando a los líderes de mantenimiento una visibilidad sin precedentes.',
+    desc: 'Los sistemas actuales registran el "qué" y el "cuándo" de los errores de las máquinas, pero omiten el "por qué". DevSolution captura cómo se realiza realmente el trabajo, brindando a los líderes de mantenimiento una visibilidad sin precedentes.',
   },
   {
     title: 'Mejora Continua de POE',
@@ -52,7 +52,7 @@ export default function MaintenancePage() {
           <blockquote className="solution-blockquote">
             &ldquo;En mantenimiento, los sistemas ERP registran que el trabajo de mantenimiento
             ocurrió, pero no registran los metadatos sobre cómo suceden realmente las cosas.
-            Vesica lo hace.&rdquo;
+            DevSolution lo hace.&rdquo;
           </blockquote>
           <p className="solution-quote-author">Director de Innovación y Tecnología de la Información</p>
           <p className="solution-quote-company">Fabricante Global de Productos Lácteos</p>

@@ -12,7 +12,7 @@ export default function ProductPage() {
       <section className={styles.productHero}>
         <div className={styles.container}>
           <div>
-            <h1>Connected Worker<sup>®</sup><br /><span>Software de Flujo de Trabajo para Producción</span></h1>
+            <h1>Software de Flujo de Trabajo<br /><span>para Operaciones Industriales</span></h1>
             <p>Una estrategia más inteligente para impulsar la productividad.</p>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function ProductPage() {
       <section className={styles.productQuote}>
         <div className={styles.container}>
           <blockquote>
-            "El mundo digital en el que estamos ahora – y Vesica juega en este mundo – es nuestro próximo gran salto en la manufactura que realmente va a cambiar la productividad del trabajador industrial como no se ha visto en 40 años."
+            &ldquo;El mundo digital en el que estamos ahora – y DevSolution juega en este mundo – es nuestro próximo gran salto en la manufactura que realmente va a cambiar la productividad del trabajador industrial como no se ha visto en 40 años.&rdquo;
           </blockquote>
           <div>
             <p className={styles.authorRole}>Vicepresidente, Ingeniería y Tecnología de Procesos</p>
@@ -84,7 +84,7 @@ export default function ProductPage() {
           <span className={styles.getStartedTag}>Comienza Ahora</span>
           <h2 className={styles.getStartedHeading}>Bienvenido a tu futuro digital</h2>
           <p className={styles.getStartedText}>
-            Agenda una demo personalizada y un experto te mostrará cómo funciona Vesica.
+            Agenda una demo personalizada y un experto te mostrará cómo funciona DevSolution.
           </p>
           <div className={styles.getStartedBtns}>
             <a href="#" className={styles.btnOutline}>Comenzar</a>

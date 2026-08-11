@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" width="320" height="56" role="img" aria-label="DEV SOLUTION">
+  <g fill="none" stroke="#0a0a0a" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M8 8h18c7.5 0 12 4.5 12 12s-4.5 12-12 12H17"/>
+    <path d="M35 40H17c-7.5 0-12-4.5-12-12s4.5-12 12-12h9"/>
+    <path d="M17 22h12M14 28h12"/>
+  </g>
+  <text x="52" y="26" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="3.5" fill="#0a0a0a">DEV SOLUTION</text>
+  <text x="52" y="42" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="500" letter-spacing="2.6" fill="#6b6b6b">DEVELOPMENT SOLUTIONS</text>
+  <rect x="118" y="48" width="20" height="2.5" fill="#e10600"/>
+</svg>

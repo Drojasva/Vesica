@@ -2,12 +2,12 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <div className="hero-badge">Plataforma Connected Worker®</div>
+        <div className="hero-badge">Soluciones Tecnológicas Industriales</div>
         <h1>Herramientas Digitales para<br /><span>Operaciones de Primera Línea</span></h1>
         <p>
-          Vesica empodera a los trabajadores industriales de primera línea con instrucciones
-          de trabajo digitales modernas, flujos de trabajo conectados y perspectivas operativas
-          en tiempo real — reemplazando el papel y los sistemas heredados.
+          DevSolution acompaña a empresas industriales en su transformación digital con
+          instrucciones de trabajo digitales modernas, flujos de trabajo conectados y
+          perspectivas operativas en tiempo real — reemplazando el papel y los sistemas heredados.
         </p>
         <div className="hero-btns">
           <a href="/demo" className="btn-hero-primary">Solicitar una Demo</a>
@@ -20,7 +20,7 @@ export default function Hero() {
           <div className="dot dot-r"></div>
           <div className="dot dot-y"></div>
           <div className="dot dot-g"></div>
-          <span style={{ color: '#8aa4c6', fontSize: '12px', marginLeft: '8px' }}>
+          <span style={{ color: '#a3a3a3', fontSize: '12px', marginLeft: '8px' }}>
             Panel de Operaciones
           </span>
         </div>
@@ -55,16 +55,16 @@ export default function Hero() {
           </div>
 
           <div style={{ marginTop: '14px' }}>
-            <div className="pb-label" style={{ color: '#b8c8e0', fontSize: '13px', marginBottom: '6px' }}>
+            <div className="pb-label" style={{ color: '#a3a3a3', fontSize: '13px', marginBottom: '6px' }}>
               <span>Puntaje de Calidad</span>
               <span style={{ color: '#4ade80' }}>98.2%</span>
             </div>
             <div className="pb">
               <div className="pb-fill" style={{ width: '98.2%', background: '#4ade80' }}></div>
             </div>
-            <div className="pb-label" style={{ color: '#b8c8e0', fontSize: '13px', marginBottom: '6px', marginTop: '10px' }}>
+            <div className="pb-label" style={{ color: '#a3a3a3', fontSize: '13px', marginBottom: '6px', marginTop: '10px' }}>
               <span>Adherencia a POE</span>
-              <span style={{ color: '#f26522' }}>87.5%</span>
+              <span style={{ color: 'var(--accent)' }}>87.5%</span>
             </div>
             <div className="pb">
               <div className="pb-fill" style={{ width: '87.5%' }}></div>

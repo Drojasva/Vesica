@@ -3,8 +3,8 @@ import DemoForm from '@/components/DemoForm'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Solicitar una Demo | Vesica Connected Worker®',
-  description: 'Agenda una demo personalizada de la plataforma Vesica Connected Worker para tus operaciones industriales.',
+  title: 'Solicitar una Demo',
+  description: 'Agenda una demo personalizada con DevSolution SpA y descubre cómo digitalizar tus operaciones industriales.',
 }
 
 export default function DemoPage() {

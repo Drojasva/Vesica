@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    text: '"Vesica ha transformado la forma en que nuestros equipos de primera línea trabajan. Eliminamos el papel por completo y nuestros indicadores de calidad mejoraron en más de un 35% durante los primeros seis meses."',
+    text: '"DevSolution ha transformado la forma en que nuestros equipos de primera línea trabajan. Eliminamos el papel por completo y nuestros indicadores de calidad mejoraron en más de un 35% durante los primeros seis meses."',
     initials: 'JR',
     avatarClass: 'av-1',
     name: 'James Rodríguez',
@@ -14,7 +14,7 @@ const testimonials = [
     role: 'Directora de EHS · Fabricante Químico',
   },
   {
-    text: '"Nuestros nuevos trabajadores son completamente productivos en la mitad del tiempo en comparación con antes de Vesica. Las instrucciones guiadas hacen que la incorporación sea increíblemente eficiente."',
+    text: '"Nuestros nuevos trabajadores son completamente productivos en la mitad del tiempo en comparación con antes de DevSolution. Las instrucciones guiadas hacen que la incorporación sea increíblemente eficiente."',
     initials: 'MT',
     avatarClass: 'av-3',
     name: 'Marco Torres',
@@ -28,7 +28,7 @@ export default function Testimonials() {
       <div className="section-tag">Casos de Éxito</div>
       <h2 className="section-title">Lo Que Dicen Nuestros Clientes</h2>
       <p className="section-sub">
-        Empresas industriales líderes confían en Vesica para gestionar sus operaciones más críticas.
+        Empresas industriales líderes confían en DevSolution para gestionar sus operaciones más críticas.
       </p>
       <div className="testi-grid">
         {testimonials.map((t) => (

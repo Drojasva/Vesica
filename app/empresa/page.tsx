@@ -1,17 +1,17 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import CTASection from '@/components/CTASection'
+import Logo from '@/components/Logo'
 
 export const metadata = {
-  title: 'Empresa | Vesica Connected Worker®',
-  description: 'Vesica empodera a los trabajadores industriales de primera línea con instrucciones de trabajo digitales, flujos conectados y perspectivas operativas en tiempo real.',
+  title: 'Empresa',
+  description: 'Conoce a DevSolution SpA: un equipo con experiencia en operaciones industriales, transformación digital y tecnologías de manufactura.',
 }
 
 const values = [
   {
     icon: '🎯',
     title: 'Expertise con Resultados',
-    desc: 'Detrás de Vesica hay un equipo con años de experiencia en operaciones industriales, transformación digital y tecnologías de manufactura. No venimos a aprender — venimos a resolver.',
+    desc: 'Detrás de DevSolution hay un equipo con años de experiencia en operaciones industriales, transformación digital y tecnologías de manufactura. No venimos a aprender — venimos a resolver.'
   },
   {
     icon: '🤝',
@@ -80,10 +80,10 @@ export default function EmpresaPage() {
             <div className="section-tag">Nosotros</div>
             <h1 className="solution-hero-title">
               Expertise Joven,<br />
-              <span style={{ color: 'var(--orange)' }}>Resultados de Clase Mundial</span>
+              <span style={{ color: 'var(--accent)' }}>Resultados de Clase Mundial</span>
             </h1>
             <p className="solution-hero-desc">
-              En Vesica reunimos a un equipo con amplia experiencia en operaciones industriales
+              En DevSolution reunimos a un equipo con amplia experiencia en operaciones industriales
               y transformación digital. Somos una empresa nueva, pero con el profesionalismo y la
               madurez técnica para resolver desafíos complejos en tu operación — desde el primer día.
             </p>
@@ -92,7 +92,7 @@ export default function EmpresaPage() {
           <div className="solution-hero-art">
             <div
               style={{
-                background: 'linear-gradient(135deg, var(--navy) 0%, var(--blue-mid) 100%)',
+                background: 'linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%)',
                 borderRadius: '24px',
                 padding: '48px 40px',
                 display: 'flex',
@@ -102,36 +102,18 @@ export default function EmpresaPage() {
                 boxShadow: '0 24px 70px rgba(0,0,0,0.28)',
               }}
             >
-              <div
-                style={{
-                  width: '72px',
-                  height: '72px',
-                  background: 'var(--orange)',
-                  borderRadius: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#fff',
-                  fontWeight: 900,
-                  fontSize: '36px',
-                }}
-              >
-                V
-              </div>
-              <span style={{ fontWeight: 800, fontSize: '28px', color: '#fff', letterSpacing: '-0.5px' }}>
-                Vesi<span style={{ color: 'var(--orange)' }}>ca</span>
-              </span>
+              <Logo variant="light" showTagline size="lg" />
               <span
                 style={{
                   fontSize: '13px',
-                  color: '#8aa4c6',
+                  color: '#a3a3a3',
                   fontWeight: 600,
                   letterSpacing: '1px',
                   textTransform: 'uppercase',
                   textAlign: 'center',
                 }}
               >
-                Connected Worker<sup>®</sup>
+                SpA
               </span>
             </div>
           </div>
@@ -146,7 +128,7 @@ export default function EmpresaPage() {
             medida y el compromiso real con cada cliente. La experiencia no se mide en años
             corporativos — se mide en resultados concretos.&rdquo;
           </blockquote>
-          <p className="solution-quote-author">Equipo Fundador, Vesica</p>
+          <p className="solution-quote-author">Equipo Fundador, DevSolution SpA</p>
         </div>
       </section>
 
@@ -180,7 +162,7 @@ export default function EmpresaPage() {
         </div>
       </section>
 
-      <section className="solution-detail" style={{ background: 'var(--gray-bg)' }}>
+      <section className="solution-detail" style={{ background: 'var(--surface)' }}>
         <div className="solution-detail-inner">
           <div className="solution-detail-text">
             <h2>Cómo Trabajamos</h2>
@@ -206,7 +188,7 @@ export default function EmpresaPage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                   <span
                     style={{
-                      background: 'var(--orange)',
+                      background: 'var(--accent)',
                       color: '#fff',
                       fontWeight: 800,
                       fontSize: '14px',
@@ -220,7 +202,7 @@ export default function EmpresaPage() {
                   </span>
                   <div>
                     <h4 style={{ margin: 0, fontSize: '15px' }}>{a.icon} {a.title}</h4>
-                    <p style={{ fontSize: '13px', color: 'var(--gray-text)', margin: '4px 0 0' }}>{a.desc}</p>
+                    <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '4px 0 0' }}>{a.desc}</p>
                   </div>
                 </div>
               </div>
@@ -231,7 +213,7 @@ export default function EmpresaPage() {
 
       <section
         style={{
-          background: 'var(--navy)',
+          background: 'var(--ink)',
           color: '#fff',
           padding: '80px 5%',
           textAlign: 'center',
@@ -248,7 +230,7 @@ export default function EmpresaPage() {
           >
             Conversemos sobre tu operación
           </h2>
-          <p style={{ fontSize: '17px', color: '#8aa4c6', lineHeight: 1.7, marginBottom: '36px' }}>
+          <p style={{ fontSize: '17px', color: '#a3a3a3', lineHeight: 1.7, marginBottom: '36px' }}>
             Queremos conocer tus desafíos y mostrarte cómo podemos ayudarte a resolverlos.
             Sin guiones ensayados, sin presión comercial — solo una conversación honesta
             entre profesionales que entienden la industria.

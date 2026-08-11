@@ -7,7 +7,7 @@
   padding: 0 5%;
 }
 .productHero {
-  background: linear-gradient(rgba(11, 30, 61, 0.8), rgba(11, 30, 61, 0.8)), url('/cta_dark_bg.png');
+  background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('/cta_dark_bg.png');
   background-size: cover;
   background-position: center;
   color: var(--white);
@@ -24,18 +24,18 @@
   letter-spacing: -1px;
 }
 .productHero h1 span {
-  color: var(--orange);
+  color: var(--accent);
 }
 .productHero p {
   font-size: 18px;
-  color: #b8c8e0;
+  color: #a3a3a3;
 }
 
 .productFeature {
   padding: 80px 0;
 }
 .productFeatureAlt {
-  background: var(--gray-bg);
+  background: var(--surface);
 }
 .productFeatureGrid {
   display: grid;
@@ -50,20 +50,20 @@
 .productFeatureText h2 {
   font-size: 36px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--ink);
   margin-bottom: 20px;
   line-height: 1.2;
   letter-spacing: -0.5px;
 }
 .productFeatureText p {
   font-size: 16px;
-  color: var(--gray-text);
+  color: var(--muted);
   line-height: 1.7;
   margin-bottom: 30px;
 }
 
 .productQuote {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--blue-mid) 100%);
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%);
   color: var(--white);
   padding: 90px 0;
   text-align: center;
@@ -84,7 +84,7 @@
   margin-bottom: 4px;
 }
 .authorCompany {
-  color: #b8c8e0;
+  color: #a3a3a3;
   font-style: italic;
   font-weight: 600;
 }
@@ -137,7 +137,7 @@
 
 .btnProductPrimary {
   display: inline-block;
-  background: var(--orange);
+  background: var(--accent);
   color: var(--white);
   padding: 14px 30px;
   border-radius: 8px;
@@ -146,7 +146,7 @@
   transition: all 0.2s;
 }
 .btnProductPrimary:hover {
-  background: var(--orange-light);
+  background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(242, 101, 34, 0.2);
 }
@@ -189,7 +189,7 @@
 .getStartedHeading {
   font-size: 48px;
   font-weight: 800;
-  color: #0b1e3d;
+  color: var(--ink);
   margin-bottom: 24px;
   letter-spacing: -1.5px;
   line-height: 1.1;

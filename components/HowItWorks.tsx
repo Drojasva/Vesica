@@ -30,7 +30,7 @@ export default function HowItWorks() {
         <div className="section-tag">Cómo Funciona</div>
         <h2 className="section-title">Del Papel a lo Digital en Semanas, No Meses</h2>
         <p className="section-sub">
-          Vesica está diseñado para una implementación rápida con mínima inversión en TI.
+          DevSolution está diseñado para una implementación rápida con mínima inversión en TI.
           Pon a tus equipos de primera línea en marcha rápidamente.
         </p>
         <a

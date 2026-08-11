@@ -55,7 +55,7 @@ const features = [
   {
     iconClass: 'icon-orange',
     title: 'Integraciones y APIs',
-    desc: 'Conéctate sin problemas con tus sistemas ERP, CMMS e IoT existentes. Vesica se integra con SAP, Microsoft, Salesforce y más.',
+    desc: 'Conéctate sin problemas con tus sistemas ERP, CMMS e IoT existentes. DevSolution se integra con SAP, Microsoft, Salesforce y más.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3" />
@@ -84,7 +84,7 @@ export default function Features() {
       <div className="section-tag">Capacidades de la Plataforma</div>
       <h2 className="section-title">Todo lo que tu Primera Línea Necesita</h2>
       <p className="section-sub">
-        Desde POE digitales hasta análisis en tiempo real, Vesica brinda a los equipos de primera
+        Desde POE digitales hasta análisis en tiempo real, DevSolution brinda a los equipos de primera
         línea las herramientas para trabajar de forma más segura, inteligente y rápida.
       </p>
       <div className="features-hero-row">

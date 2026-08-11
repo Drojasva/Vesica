@@ -3,7 +3,7 @@
 import Link from 'next/link'
 
 export default function Error({
-  error,
+  error: _error,
   reset,
 }: {
   error: Error & { digest?: string }
@@ -19,7 +19,7 @@ export default function Error({
         minHeight: '100vh',
         padding: '0 5%',
         textAlign: 'center',
-        background: 'var(--navy)',
+        background: 'var(--ink)',
         color: '#fff',
       }}
     >
@@ -28,7 +28,7 @@ export default function Error({
           style={{
             fontSize: '13px',
             fontWeight: 700,
-            color: 'var(--orange)',
+            color: 'var(--accent)',
             textTransform: 'uppercase',
             letterSpacing: '1.5px',
             marginBottom: '12px',
@@ -50,7 +50,7 @@ export default function Error({
         <p
           style={{
             fontSize: '17px',
-            color: '#b8c8e0',
+            color: '#a3a3a3',
             lineHeight: 1.7,
             marginBottom: '36px',
           }}
@@ -61,7 +61,7 @@ export default function Error({
           <button
             onClick={reset}
             style={{
-              background: 'var(--orange)',
+              background: 'var(--accent)',
               color: '#fff',
               padding: '14px 28px',
               borderRadius: '8px',

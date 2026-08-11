@@ -1,9 +1,9 @@
 export default function CTASection() {
   return (
     <section className="cta-section">
-      <h2>¿Listo para Conectar tu Primera Línea?</h2>
+      <h2>¿Listo para Transformar tu Operación?</h2>
       <p>
-        Únete a cientos de empresas industriales que utilizan Vesica para digitalizar
+        Únete a cientos de empresas industriales que confían en DevSolution para digitalizar
         operaciones y desbloquear todo el potencial de su fuerza laboral.
       </p>
       <a href="/demo" className="btn-hero-primary">Solicita una Demo Gratis</a>

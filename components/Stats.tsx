@@ -10,7 +10,7 @@ export default function Stats() {
     <section className="stats">
       <h2>Impacto Comprobado a Escala</h2>
       <p>
-        Vesica ofrece resultados medibles en industrias manufactureras, energéticas y de
+        DevSolution ofrece resultados medibles en industrias manufactureras, energéticas y de
         alimentos y bebidas en todo el mundo.
       </p>
       <div className="stats-grid">

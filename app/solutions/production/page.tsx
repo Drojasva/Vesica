@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
 
 export const metadata = {
-  title: 'Soluciones de Producción | Vesica Connected Worker®',
-  description: 'Optimiza los flujos de trabajo de producción, aumenta el rendimiento y empodera a tu fuerza laboral de primera línea con herramientas digitales.',
+  title: 'Soluciones de Producción',
+  description: 'Optimiza los flujos de trabajo de producción, aumenta el rendimiento y empodera a tu fuerza laboral de primera línea con DevSolution SpA.',
 }
 
 const benefits = [
@@ -39,7 +39,7 @@ export default function ProductionPage() {
           <h1 className="solution-hero-title">Una Estrategia más Inteligente para Impulsar la Productividad</h1>
           <p className="solution-hero-desc">
             Acelera las ganancias de producción y reduce los cuellos de botella en todas tus
-            operaciones sin comprometer la calidad ni la seguridad. Vesica brinda a tus equipos
+            operaciones sin comprometer la calidad ni la seguridad. DevSolution brinda a tus equipos
             de primera línea las herramientas digitales para trabajar más rápido, más inteligente
             y más eficientemente.
           </p>
@@ -50,7 +50,7 @@ export default function ProductionPage() {
       <section className="solution-quote-section">
         <div className="solution-quote-inner">
           <blockquote className="solution-blockquote">
-            &ldquo;El mundo digital en el que estamos ahora — y Vesica juega en este mundo — es
+            &ldquo;El mundo digital en el que estamos ahora — y DevSolution juega en este mundo — es
             nuestro próximo gran salto en la manufactura que realmente va a cambiar la
             productividad del trabajador industrial.&rdquo;
           </blockquote>

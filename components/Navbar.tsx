@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ChevronDown, Menu, X } from 'lucide-react'
+import Logo from './Logo'
 
 const solutions = [
   { label: 'Mantenimiento', href: '/solutions/maintenance' },
@@ -53,8 +54,7 @@ export default function Navbar() {
   return (
     <nav>
       <Link href="/" className="nav-logo" onClick={closeMobile}>
-        <div className="nav-logo-icon">V</div>
-        <span className="nav-logo-text">Vesi<span>ca</span></span>
+        <Logo variant="dark" />
       </Link>
 
       <ul className="nav-links">

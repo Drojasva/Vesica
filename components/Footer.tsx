@@ -1,4 +1,6 @@
-const productLinks = ['Instrucciones de Trabajo', 'Flujos Conectados', 'Analíticas', 'Integraciones', 'App Móvil']
+import Logo from './Logo'
+
+const productLinks = ['Instrucciones de Trabajo Digitales', 'Flujos Conectados', 'Analíticas Operacionales', 'Integraciones', 'App Móvil']
 const solutionLinks = ['Manufactura', 'Energía y Servicios', 'Alimentos y Bebidas', 'Químicos', 'Minería']
 const resourceLinks = [
   { label: 'Servicios', href: '/recursos' },
@@ -8,22 +10,25 @@ const resourceLinks = [
   { label: 'Documentación', href: '#' },
   { label: 'Comunidad', href: '#' },
 ]
-const companyLinks = ['Nosotros', 'Carreras', 'Prensa', 'Socios', 'Contacto']
+const companyLinks = [
+  { label: 'Nosotros', href: '/empresa' },
+  { label: 'Carreras', href: '#' },
+  { label: 'Prensa', href: '#' },
+  { label: 'Socios', href: '#' },
+  { label: 'Contacto', href: '/demo' },
+]
 
 export default function Footer() {
   return (
     <footer>
       <div className="footer-top">
         <div className="footer-brand">
-          <div className="nav-logo" style={{ marginBottom: '16px' }}>
-            <div className="nav-logo-icon">V</div>
-            <span style={{ fontWeight: 800, fontSize: '20px', color: '#fff', letterSpacing: '-0.5px' }}>
-              Vesi<span style={{ color: 'var(--orange)' }}>ca</span>
-            </span>
+          <div style={{ marginBottom: '16px' }}>
+            <Logo variant="light" />
           </div>
           <p>
-            La plataforma Connected Worker® de Vesica para operaciones industriales de primera línea.
-            Empoderando trabajadores. Mejorando el rendimiento.
+            Soluciones tecnológicas para operaciones industriales de primera línea.
+            Acompañamos a empresas en su transformación digital con profesionalismo y resultados medibles.
           </p>
         </div>
 
@@ -41,12 +46,18 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h5>Empresa</h5>
-          <ul>{companyLinks.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
+          <ul>
+            {companyLinks.map((l) => (
+              <li key={l.label}>
+                <a href={l.href}>{l.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© 2026 Vesica, Inc. Todos los derechos reservados. Connected Worker® es una marca registrada.</span>
+        <span>© 2026 DevSolution SpA. Todos los derechos reservados.</span>
         <div style={{ display: 'flex', gap: '24px' }}>
           <a href="#">Política de Privacidad</a>
           <a href="#">Términos del Servicio</a>

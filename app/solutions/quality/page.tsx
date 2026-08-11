@@ -1,10 +1,11 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
+import Image from 'next/image'
 
 export const metadata = {
-  title: 'Soluciones de Calidad | Vesica Connected Worker®',
-  description: 'Optimiza los procesos de aseguramiento de calidad, auditorías y trazabilidad con herramientas digitales para tu fuerza laboral de primera línea.',
+  title: 'Soluciones de Calidad',
+  description: 'Optimiza los procesos de aseguramiento de calidad, auditorías y trazabilidad con las herramientas digitales de DevSolution SpA.',
 }
 
 const useCases = [
@@ -63,13 +64,19 @@ export default function QualityPage() {
             <h1 className="solution-hero-title">Calidad sin Concesiones, Desde el Piso</h1>
             <p className="solution-hero-desc">
               Optimiza el aseguramiento de calidad, las auditorías y los procesos de certificación.
-              Vesica brinda visibilidad total sobre la ejecución y el cumplimiento, convirtiendo
+              DevSolution brinda visibilidad total sobre la ejecución y el cumplimiento, convirtiendo
               cada inspección en datos accionables.
             </p>
             <a href="/demo" className="btn-hero-primary">Solicitar una Demo</a>
           </div>
-          <div className="solution-hero-art">
-            <img src="/quality-inspection.svg" alt="Panel digital de inspección de calidad" />
+          <div className="solution-hero-art" style={{ position: 'relative', width: '100%', minHeight: '320px' }}>
+            <Image
+              src="/quality-inspection.svg"
+              alt="Panel digital de inspección de calidad"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority
+            />
           </div>
         </div>
       </section>
@@ -77,7 +84,7 @@ export default function QualityPage() {
       <section className="solution-quote-section">
         <div className="solution-quote-inner">
           <blockquote className="solution-blockquote">
-            &ldquo;Con Vesica, los procesos de calidad dejaron de ser formularios en papel que
+            &ldquo;Con DevSolution, los procesos de calidad dejaron de ser formularios en papel que
             nadie revisaba. Ahora cada inspección genera datos que nos permiten mejorar
             continuamente.&rdquo;
           </blockquote>
