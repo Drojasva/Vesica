@@ -623,6 +623,10 @@ nav {
 }
 .solution-hero-art {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
 }
 .solution-hero-art img {
   position: relative;

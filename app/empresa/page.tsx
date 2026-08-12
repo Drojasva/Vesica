@@ -3,6 +3,7 @@ import { DraftingCompass, Handshake, Rocket, Search, ShieldCheck, Target, Trendi
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Logo from '@/components/Logo'
+import AnimatedStatsGrid from '@/components/AnimatedStatsGrid'
 
 export const metadata = {
   title: 'Empresa',
@@ -90,32 +91,7 @@ export default function EmpresaPage() {
             <a href="/demo" className="btn-hero-primary">Trabajemos Juntos</a>
           </div>
           <div className="solution-hero-art">
-            <div
-              style={{
-                background: 'linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%)',
-                borderRadius: '24px',
-                padding: '48px 40px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '16px',
-                boxShadow: '0 24px 70px rgba(0,0,0,0.28)',
-              }}
-            >
-              <Logo variant="light" showTagline size="lg" />
-              <span
-                style={{
-                  fontSize: '13px',
-                  color: '#a3a3a3',
-                  fontWeight: 600,
-                  letterSpacing: '1px',
-                  textTransform: 'uppercase',
-                  textAlign: 'center',
-                }}
-              >
-                SpA
-              </span>
-            </div>
+            <Logo variant="light" lockup size="lg" />
           </div>
         </div>
       </section>
@@ -133,14 +109,7 @@ export default function EmpresaPage() {
       </section>
 
       <section className="solution-stats">
-        <div className="solution-stats-inner">
-          {expertise.map((f) => (
-            <div key={f.label} className="solution-stat">
-              <div className="solution-stat-value">{f.value}</div>
-              <div className="solution-stat-label">{f.label}</div>
-            </div>
-          ))}
-        </div>
+        <AnimatedStatsGrid stats={expertise} />
       </section>
 
       <section className="solution-benefits" style={{ background: 'var(--white)' }}>

@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="footer-top">
         <div className="footer-brand">
           <div style={{ marginBottom: '16px' }}>
-            <Logo variant="light" />
+            <Logo variant="light" lockup size="md" />
           </div>
           <p>
             Soluciones tecnológicas para operaciones industriales de primera línea.

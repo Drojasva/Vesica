@@ -2,6 +2,7 @@ import { BarChart3, Wrench } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
+import AnimatedStatsGrid from '@/components/AnimatedStatsGrid'
 
 export const metadata = {
   title: 'Soluciones de Mantenimiento',
@@ -79,14 +80,7 @@ export default function MaintenancePage() {
       </section>
 
       <section className="solution-stats">
-        <div className="solution-stats-inner">
-          {stats.map((s) => (
-            <div key={s.label} className="solution-stat">
-              <div className="solution-stat-value">{s.value}</div>
-              <div className="solution-stat-label">{s.label}</div>
-            </div>
-          ))}
-        </div>
+        <AnimatedStatsGrid stats={stats} />
       </section>
 
       <section className="solution-detail">

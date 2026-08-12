@@ -3,6 +3,7 @@ import { BarChart3, ClipboardCheck, Eye, FileCheck2, Search, Smartphone } from '
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
+import AnimatedStatsGrid from '@/components/AnimatedStatsGrid'
 import Image from 'next/image'
 
 export const metadata = {
@@ -139,14 +140,7 @@ export default function QualityPage() {
       </section>
 
       <section className="solution-stats">
-        <div className="solution-stats-inner">
-          {stats.map((s) => (
-            <div key={s.label} className="solution-stat">
-              <div className="solution-stat-value">{s.value}</div>
-              <div className="solution-stat-label">{s.label}</div>
-            </div>
-          ))}
-        </div>
+        <AnimatedStatsGrid stats={stats} />
       </section>
 
       <section className="solution-detail">
