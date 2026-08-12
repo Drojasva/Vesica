@@ -1,3 +1,4 @@
+import { BarChart3, Wrench } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
@@ -107,12 +108,12 @@ export default function MaintenancePage() {
           </div>
           <div className="solution-detail-visual">
             <div className="solution-visual-card">
-              <div className="solution-visual-icon">🔧</div>
+              <div className="solution-visual-icon"><Wrench size={24} strokeWidth={1.8} /></div>
               <h4>Mantenimiento Autónomo</h4>
               <p>Permite a los operadores realizar tareas de mantenimiento rutinarias de forma independiente con procedimientos digitales guiados.</p>
             </div>
             <div className="solution-visual-card">
-              <div className="solution-visual-icon">📊</div>
+              <div className="solution-visual-icon"><BarChart3 size={24} strokeWidth={1.8} /></div>
               <h4>Decisiones Basadas en Datos</h4>
               <p>Aprovecha los datos de ejecución para optimizar los programas de mantenimiento y la asignación de recursos.</p>
             </div>

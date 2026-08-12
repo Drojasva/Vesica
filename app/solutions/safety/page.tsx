@@ -1,3 +1,5 @@
+import type { LucideIcon } from 'lucide-react'
+import { AlertTriangle, BarChart3, ClipboardCheck, LockKeyhole, ShieldCheck } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
@@ -8,24 +10,30 @@ export const metadata = {
   description: 'Digitaliza tus programas de seguridad con DevSolution SpA para proteger a tu fuerza laboral, garantizar el cumplimiento normativo y prevenir incidentes.',
 }
 
-const useCases = [
+type UseCase = {
+  Icon: LucideIcon
+  title: string
+  desc: string
+}
+
+const useCases: UseCase[] = [
   {
-    icon: '🔒',
+    Icon: LockKeyhole,
     title: 'Bloqueo/Etiquetado (LOTO)',
     desc: 'Digitaliza los procedimientos de bloqueo y etiquetado para garantizar que cada paso se complete en el orden correcto, con evidencia fotográfica y verificación en tiempo real.',
   },
   {
-    icon: '🛡️',
+    Icon: ShieldCheck,
     title: 'Rondas de Seguridad',
     desc: 'Estandariza las inspecciones de seguridad con checklists digitales que aseguran cobertura completa y generan datos accionables para la mejora continua.',
   },
   {
-    icon: '📋',
+    Icon: ClipboardCheck,
     title: 'Análisis de Seguridad en el Trabajo (JSA)',
     desc: 'Facilita la identificación y evaluación de riesgos directamente en el punto de trabajo, con flujos guiados que documentan peligros y controles preventivos.',
   },
   {
-    icon: '⚠️',
+    Icon: AlertTriangle,
     title: 'Reporte de Cuasi-Incidentes',
     desc: 'Empodera a los trabajadores para reportar cuasi-incidentes en tiempo real desde cualquier dispositivo, alimentando un sistema de alerta temprana que previene accidentes graves.',
   },
@@ -103,7 +111,7 @@ export default function SafetyPage() {
           <div className="solution-use-cases-grid">
             {useCases.map((uc) => (
               <div key={uc.title} className="solution-use-case-card">
-                <div className="solution-use-case-icon">{uc.icon}</div>
+                <div className="solution-use-case-icon"><uc.Icon size={24} strokeWidth={1.8} /></div>
                 <h3>{uc.title}</h3>
                 <p>{uc.desc}</p>
               </div>
@@ -158,12 +166,12 @@ export default function SafetyPage() {
           </div>
           <div className="solution-detail-visual">
             <div className="solution-visual-card">
-              <div className="solution-visual-icon">🔒</div>
+              <div className="solution-visual-icon"><LockKeyhole size={24} strokeWidth={1.8} /></div>
               <h4>Procedimientos LOTO Digitales</h4>
               <p>Guía paso a paso con verificación fotográfica para garantizar el aislamiento seguro de energía en cada intervención.</p>
             </div>
             <div className="solution-visual-card">
-              <div className="solution-visual-icon">📊</div>
+              <div className="solution-visual-icon"><BarChart3 size={24} strokeWidth={1.8} /></div>
               <h4>Alertas Tempranas</h4>
               <p>Analiza patrones de cuasi-incidentes y desviaciones para intervenir antes de que ocurra un accidente.</p>
             </div>

@@ -1,48 +1,199 @@
-'use client'
+﻿'use client'
 
-import { useState, FormEvent } from 'react'
 import { Turnstile } from '@marsidev/react-turnstile'
+import { ChangeEvent, FormEvent, FocusEvent, useState } from 'react'
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
 
 const employeeOptions = ['1-50', '51-200', '201-500', '501-1.000', '1.000+']
+const genericEmailDomains = ['gmail.com', 'hotmail.com', 'outlook.com', 'yahoo.com', 'icloud.com', 'live.com']
+const namePattern = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ' -]+$/
+
+type FormState = {
+  firstName: string
+  lastName: string
+  email: string
+  phone: string
+  company: string
+  jobTitle: string
+  employees: string
+  message: string
+}
+
+type FieldErrors = Partial<Record<keyof FormState, string>>
+type TouchedFields = Partial<Record<keyof FormState, boolean>>
+
+const initialForm: FormState = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '+56 ',
+  company: '',
+  jobTitle: '',
+  employees: '',
+  message: '',
+}
+
+function normalizeSpaces(value: string) {
+  return value.replace(/\s+/g, ' ').trim()
+}
+
+function normalizeEmail(value: string) {
+  return value.replace(/\s+/g, '').toLowerCase()
+}
+
+function formatChilePhone(value: string) {
+  const digits = value.replace(/\D/g, '')
+  const localDigits = digits.startsWith('56') ? digits.slice(2) : digits
+  const limited = localDigits.slice(0, 9)
+
+  if (!limited) return '+56 '
+  if (limited.length <= 1) return `+56 ${limited}`
+  if (limited.length <= 5) return `+56 ${limited.slice(0, 1)} ${limited.slice(1)}`
+  return `+56 ${limited.slice(0, 1)} ${limited.slice(1, 5)} ${limited.slice(5)}`
+}
+
+function countPhoneDigits(value: string) {
+  const digits = value.replace(/\D/g, '')
+  return digits.startsWith('56') ? digits.slice(2).length : digits.length
+}
+
+function normalizeForm(form: FormState): FormState {
+  return {
+    firstName: normalizeSpaces(form.firstName),
+    lastName: normalizeSpaces(form.lastName),
+    email: normalizeEmail(form.email),
+    phone: formatChilePhone(form.phone),
+    company: normalizeSpaces(form.company),
+    jobTitle: normalizeSpaces(form.jobTitle),
+    employees: form.employees,
+    message: normalizeSpaces(form.message),
+  }
+}
+
+function validateForm(form: FormState): FieldErrors {
+  const errors: FieldErrors = {}
+  const normalized = normalizeForm(form)
+  const emailDomain = normalized.email.split('@')[1]
+
+  if (normalized.firstName.length < 2 || !namePattern.test(normalized.firstName)) {
+    errors.firstName = 'Ingresa un nombre válido.'
+  }
+
+  if (normalized.lastName.length < 2 || !namePattern.test(normalized.lastName)) {
+    errors.lastName = 'Ingresa un apellido válido.'
+  }
+
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(normalized.email)) {
+    errors.email = 'Ingresa un correo válido.'
+  } else if (emailDomain && genericEmailDomains.includes(emailDomain)) {
+    errors.email = 'Usa un correo corporativo.'
+  }
+
+  const phoneDigits = countPhoneDigits(normalized.phone)
+  if (phoneDigits > 0 && phoneDigits !== 9) {
+    errors.phone = 'Ingresa 9 dígitos después de +56.'
+  }
+
+  if (normalized.company.length < 2) {
+    errors.company = 'Ingresa el nombre de tu empresa.'
+  }
+
+  if (normalized.jobTitle.length < 2) {
+    errors.jobTitle = 'Ingresa tu cargo.'
+  }
+
+  if (!normalized.employees) {
+    errors.employees = 'Selecciona un rango.'
+  }
+
+  if (normalized.message.length > 500) {
+    errors.message = 'Máximo 500 caracteres.'
+  }
+
+  return errors
+}
 
 export default function DemoForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const [captchaError, setCaptchaError] = useState<string | null>(null)
-  const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '+56 ',
-    company: '',
-    jobTitle: '',
-    employees: '',
-    message: '',
-  })
+  const [submitAttempted, setSubmitAttempted] = useState(false)
+  const [touched, setTouched] = useState<TouchedFields>({})
+  const [form, setForm] = useState<FormState>(initialForm)
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    if (e.target.name === 'phone') {
-      const val = e.target.value
-      if (!val.startsWith('+56 ')) return
-    }
-    setForm({ ...form, [e.target.name]: e.target.value })
+  const errors = validateForm(form)
+  const isFormValid = Object.keys(errors).length === 0
+  const canSubmit = isFormValid && Boolean(TURNSTILE_SITE_KEY) && Boolean(captchaToken) && !submitting
+
+  function shouldShowError(field: keyof FormState) {
+    return Boolean(errors[field] && (touched[field] || submitAttempted))
   }
 
-  function handleSubmit(e: FormEvent) {
+  function handleChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+    const { name, value } = e.target
+    const field = name as keyof FormState
+
+    setCaptchaError(null)
+    setForm((current) => ({
+      ...current,
+      [field]: field === 'phone' ? formatChilePhone(value) : field === 'email' ? normalizeEmail(value) : value,
+    }))
+  }
+
+  function handleBlur(e: FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+    const field = e.target.name as keyof FormState
+    setTouched((current) => ({ ...current, [field]: true }))
+    setForm((current) => ({ ...current, [field]: normalizeForm(current)[field] }))
+  }
+
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault()
+    setSubmitAttempted(true)
+
+    const normalized = normalizeForm(form)
+    const nextErrors = validateForm(normalized)
+    setForm(normalized)
+
+    if (Object.keys(nextErrors).length > 0) {
+      setCaptchaError('Revisa los campos marcados antes de enviar.')
+      return
+    }
+
     if (!TURNSTILE_SITE_KEY) {
       setCaptchaError('La verificación de seguridad no está configurada. Contacta al administrador.')
       return
     }
+
     if (!captchaToken) {
-      setCaptchaError('Por favor completa la verificación de seguridad.')
+      setCaptchaError('Completa la verificación de seguridad para continuar.')
       return
     }
+
     setCaptchaError(null)
-    // TODO: Enviar captchaToken al backend para validarlo con Cloudflare
-    setSubmitted(true)
+    setSubmitting(true)
+
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...normalized, captchaToken }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        setCaptchaError(result.error || 'No se pudo enviar la solicitud. Inténtalo de nuevo.')
+        return
+      }
+
+      setSubmitted(true)
+    } catch {
+      setCaptchaError('No se pudo enviar la solicitud. Inténtalo de nuevo.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -90,50 +241,58 @@ export default function DemoForm() {
               <p>Tu solicitud de demo ha sido recibida. Nuestro equipo se pondrá en contacto dentro de las próximas 24 horas para agendar tu demostración personalizada.</p>
             </div>
           ) : (
-            <form className="demo-form" onSubmit={handleSubmit}>
+            <form className="demo-form" onSubmit={handleSubmit} noValidate>
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="firstName">Nombre *</label>
-                  <input id="firstName" name="firstName" type="text" required value={form.firstName} onChange={handleChange} placeholder="Juan" />
+                  <input id="firstName" name="firstName" type="text" required minLength={2} maxLength={40} autoComplete="given-name" value={form.firstName} onChange={handleChange} onBlur={handleBlur} placeholder="Juan" aria-invalid={shouldShowError('firstName')} />
+                  {shouldShowError('firstName') && <span className="field-error">{errors.firstName}</span>}
                 </div>
                 <div className="form-group">
                   <label htmlFor="lastName">Apellido *</label>
-                  <input id="lastName" name="lastName" type="text" required value={form.lastName} onChange={handleChange} placeholder="Pérez" />
+                  <input id="lastName" name="lastName" type="text" required minLength={2} maxLength={50} autoComplete="family-name" value={form.lastName} onChange={handleChange} onBlur={handleBlur} placeholder="Pérez" aria-invalid={shouldShowError('lastName')} />
+                  {shouldShowError('lastName') && <span className="field-error">{errors.lastName}</span>}
                 </div>
               </div>
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="email">Correo Corporativo *</label>
-                  <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} placeholder="juan@empresa.cl" />
+                  <input id="email" name="email" type="email" required maxLength={120} autoComplete="email" inputMode="email" value={form.email} onChange={handleChange} onBlur={handleBlur} placeholder="juan@empresa.cl" aria-invalid={shouldShowError('email')} />
+                  {shouldShowError('email') && <span className="field-error">{errors.email}</span>}
                 </div>
                 <div className="form-group">
                   <label htmlFor="phone">Teléfono</label>
-                  <input id="phone" name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder="+56 9 1234 5678" />
+                  <input id="phone" name="phone" type="tel" autoComplete="tel" inputMode="numeric" value={form.phone} onChange={handleChange} onBlur={handleBlur} placeholder="+56 9 1234 5678" aria-invalid={shouldShowError('phone')} />
+                  {shouldShowError('phone') && <span className="field-error">{errors.phone}</span>}
                 </div>
               </div>
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="company">Empresa *</label>
-                  <input id="company" name="company" type="text" required value={form.company} onChange={handleChange} placeholder="Minera del Pacífico" />
+                  <input id="company" name="company" type="text" required minLength={2} maxLength={80} autoComplete="organization" value={form.company} onChange={handleChange} onBlur={handleBlur} placeholder="Agrosuper" aria-invalid={shouldShowError('company')} />
+                  {shouldShowError('company') && <span className="field-error">{errors.company}</span>}
                 </div>
                 <div className="form-group">
                   <label htmlFor="jobTitle">Cargo *</label>
-                  <input id="jobTitle" name="jobTitle" type="text" required value={form.jobTitle} onChange={handleChange} placeholder="Jefe de Operaciones" />
+                  <input id="jobTitle" name="jobTitle" type="text" required minLength={2} maxLength={80} autoComplete="organization-title" value={form.jobTitle} onChange={handleChange} onBlur={handleBlur} placeholder="Jefe de Operaciones" aria-invalid={shouldShowError('jobTitle')} />
+                  {shouldShowError('jobTitle') && <span className="field-error">{errors.jobTitle}</span>}
                 </div>
               </div>
               <div className="form-group">
                 <label htmlFor="employees">Número de Empleados *</label>
-                <select id="employees" name="employees" required value={form.employees} onChange={handleChange}>
+                <select id="employees" name="employees" required value={form.employees} onChange={handleChange} onBlur={handleBlur} aria-invalid={shouldShowError('employees')}>
                   <option value="">Selecciona un rango</option>
                   {employeeOptions.map((opt) => (
                     <option key={opt} value={opt}>{opt}</option>
                   ))}
                 </select>
+                {shouldShowError('employees') && <span className="field-error">{errors.employees}</span>}
               </div>
               <div className="form-group">
                 <label htmlFor="message">Mensaje</label>
-                <textarea id="message" name="message" rows={4} value={form.message} onChange={handleChange} placeholder="Cuéntanos sobre tu caso de uso o cualquier consulta específica..." />
-              </div>
+                  <textarea id="message" name="message" rows={4} maxLength={500} value={form.message} onChange={handleChange} onBlur={handleBlur} placeholder="Cuéntanos sobre tu caso de uso o cualquier consulta específica..." aria-invalid={shouldShowError('message')} />
+                  {shouldShowError('message') && <span className="field-error">{errors.message}</span>}
+                </div>
               <div className="form-group" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
                 {TURNSTILE_SITE_KEY ? (
                   <Turnstile
@@ -159,7 +318,9 @@ export default function DemoForm() {
                   </p>
                 )}
               </div>
-              <button type="submit" className="btn-demo-submit">Solicitar Demo</button>
+              <button type="submit" className="btn-demo-submit" disabled={!canSubmit}>
+                {submitting ? 'Enviando...' : 'Solicitar Demo'}
+              </button>
               <p className="demo-disclaimer">Al enviar, aceptas nuestra Política de Privacidad. Sin spam, nunca.</p>
             </form>
           )}

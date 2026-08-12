@@ -1,3 +1,5 @@
+import type { LucideIcon } from 'lucide-react'
+import { BarChart3, ClipboardCheck, Eye, FileCheck2, Search, Smartphone } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
@@ -8,24 +10,30 @@ export const metadata = {
   description: 'Optimiza los procesos de aseguramiento de calidad, auditorías y trazabilidad con las herramientas digitales de DevSolution SpA.',
 }
 
-const useCases = [
+type UseCase = {
+  Icon: LucideIcon
+  title: string
+  desc: string
+}
+
+const useCases: UseCase[] = [
   {
-    icon: '✅',
+    Icon: ClipboardCheck,
     title: 'Liberación de Producto',
     desc: 'Digitaliza los checklists de liberación de producto para garantizar que cada lote cumpla con los estándares de calidad antes de salir de la línea.',
   },
   {
-    icon: '👁️',
+    Icon: Eye,
     title: 'Inspección Visual',
     desc: 'Estandariza las inspecciones visuales con guías digitales paso a paso, captura fotográfica y criterios de aceptación/rechazo claros e intuitivos.',
   },
   {
-    icon: '📱',
+    Icon: Smartphone,
     title: 'Inspección Remota',
     desc: 'Permite a los expertos de calidad supervisar y validar inspecciones a distancia en tiempo real, escalando su expertise sin necesidad de estar presentes.',
   },
   {
-    icon: '📑',
+    Icon: FileCheck2,
     title: 'LPAs / Trazabilidad de Auditoría',
     desc: 'Automatiza las Auditorías por Capas del Proceso (LPA) y mantén un registro digital completo que garantiza trazabilidad total ante certificaciones y auditorías.',
   },
@@ -103,7 +111,7 @@ export default function QualityPage() {
           <div className="solution-use-cases-grid">
             {useCases.map((uc) => (
               <div key={uc.title} className="solution-use-case-card">
-                <div className="solution-use-case-icon">{uc.icon}</div>
+                <div className="solution-use-case-icon"><uc.Icon size={24} strokeWidth={1.8} /></div>
                 <h3>{uc.title}</h3>
                 <p>{uc.desc}</p>
               </div>
@@ -158,12 +166,12 @@ export default function QualityPage() {
           </div>
           <div className="solution-detail-visual">
             <div className="solution-visual-card">
-              <div className="solution-visual-icon">🔍</div>
+              <div className="solution-visual-icon"><Search size={24} strokeWidth={1.8} /></div>
               <h4>Inspección en el Punto de Trabajo</h4>
               <p>Los operadores realizan inspecciones guiadas con criterios visuales y numéricos directamente en su estación de trabajo.</p>
             </div>
             <div className="solution-visual-card">
-              <div className="solution-visual-icon">📈</div>
+              <div className="solution-visual-icon"><BarChart3 size={24} strokeWidth={1.8} /></div>
               <h4>Analytics de Calidad</h4>
               <p>Dashboards en tiempo real que muestran tendencias de no-conformidades, tasas de rechazo y oportunidades de mejora.</p>
             </div>

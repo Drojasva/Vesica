@@ -1,3 +1,4 @@
+import { ClipboardCheck, Gauge } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
@@ -109,12 +110,12 @@ export default function ProductionPage() {
           </div>
           <div className="solution-detail-visual">
             <div className="solution-visual-card">
-              <div className="solution-visual-icon">⚡</div>
+              <div className="solution-visual-icon"><Gauge size={24} strokeWidth={1.8} /></div>
               <h4>Mayor Rendimiento</h4>
               <p>Reduce los tiempos de cambio y elimina los cuellos de botella de producción con flujos de trabajo digitales guiados.</p>
             </div>
             <div className="solution-visual-card">
-              <div className="solution-visual-icon">✅</div>
+              <div className="solution-visual-icon"><ClipboardCheck size={24} strokeWidth={1.8} /></div>
               <h4>Aseguramiento de Calidad</h4>
               <p>Integra controles de calidad directamente en los flujos de trabajo de producción para detectar defectos en la fuente.</p>
             </div>

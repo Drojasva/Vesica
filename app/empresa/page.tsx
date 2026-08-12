@@ -1,3 +1,5 @@
+import type { LucideIcon } from 'lucide-react'
+import { DraftingCompass, Handshake, Rocket, Search, ShieldCheck, Target, TrendingUp, Zap } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Logo from '@/components/Logo'
@@ -7,47 +9,53 @@ export const metadata = {
   description: 'Conoce a DevSolution SpA: un equipo con experiencia en operaciones industriales, transformación digital y tecnologías de manufactura.',
 }
 
-const values = [
+type CardItem = {
+  Icon: LucideIcon
+  title: string
+  desc: string
+}
+
+const values: CardItem[] = [
   {
-    icon: '🎯',
+    Icon: Target,
     title: 'Expertise con Resultados',
     desc: 'Detrás de DevSolution hay un equipo con años de experiencia en operaciones industriales, transformación digital y tecnologías de manufactura. No venimos a aprender — venimos a resolver.'
   },
   {
-    icon: '🤝',
+    Icon: Handshake,
     title: 'Cercanía y Compromiso',
     desc: 'Somos una empresa ágil, con la capacidad de entender tu operación a fondo y adaptarnos a tus necesidades reales. Te acompañamos en cada paso, no como un proveedor más, sino como un socio estratégico.',
   },
   {
-    icon: '⚡',
+    Icon: Zap,
     title: 'Implementación Rápida, Resultados Concretos',
     desc: 'Apostamos por la acción. En semanas, no meses, tu equipo estará usando una plataforma diseñada para trabajar — sin rodeos, sin burocracia, con foco en lo que importa: la ejecución en terreno.',
   },
   {
-    icon: '🛡️',
+    Icon: ShieldCheck,
     title: 'Profesionalismo y Calidad',
     desc: 'Cada solución que entregamos pasa por rigurosos estándares de calidad. Sabemos que en la industria no hay margen para el error. Por eso, nuestro trabajo se respalda con excelencia técnica y atención al detalle.',
   },
 ]
 
-const approach = [
+const approach: CardItem[] = [
   {
-    icon: '🔍',
+    Icon: Search,
     title: 'Diagnóstico',
     desc: 'Entendemos tu operación, identificamos puntos de dolor y oportunidades de mejora concretas.',
   },
   {
-    icon: '📐',
+    Icon: DraftingCompass,
     title: 'Diseño',
     desc: 'Diseñamos una solución a la medida, aprovechando las mejores prácticas de la industria y tecnología de punta.',
   },
   {
-    icon: '🚀',
+    Icon: Rocket,
     title: 'Implementación',
     desc: 'Ponemos en marcha la solución con metodologías ágiles, capacitación al equipo y acompañamiento continuo.',
   },
   {
-    icon: '📈',
+    Icon: TrendingUp,
     title: 'Optimización',
     desc: 'Medimos resultados, ajustamos procesos y escalamos la solución para maximizar el impacto en tu operación.',
   },
@@ -63,14 +71,6 @@ const expertise = [
 export default function EmpresaPage() {
   return (
     <>
-      <style>{`
-        #empresa-page .solution-benefit-card:hover,
-        #empresa-page .solution-visual-card:hover {
-          transform: none !important;
-          box-shadow: none !important;
-          border-top-color: transparent !important;
-        }
-      `}</style>
       <div id="empresa-page">
       <Navbar />
 
@@ -153,7 +153,9 @@ export default function EmpresaPage() {
           <div className="solution-benefits-grid">
             {values.map((v) => (
               <div key={v.title} className="solution-benefit-card">
-                <div style={{ fontSize: '32px', marginBottom: '16px' }}>{v.icon}</div>
+                <div className="solution-card-icon">
+                  <v.Icon size={24} strokeWidth={1.8} />
+                </div>
                 <h3>{v.title}</h3>
                 <p>{v.desc}</p>
               </div>
@@ -185,7 +187,7 @@ export default function EmpresaPage() {
           <div className="solution-detail-visual">
             {approach.map((a, i) => (
               <div key={a.title} className="solution-visual-card">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
                   <span
                     style={{
                       background: 'var(--accent)',
@@ -201,7 +203,10 @@ export default function EmpresaPage() {
                     {i + 1}
                   </span>
                   <div>
-                    <h4 style={{ margin: 0, fontSize: '15px' }}>{a.icon} {a.title}</h4>
+                    <div className="solution-step-heading">
+                      <a.Icon size={18} strokeWidth={1.8} />
+                      <h4 style={{ margin: 0, fontSize: '15px' }}>{a.title}</h4>
+                    </div>
                     <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '4px 0 0' }}>{a.desc}</p>
                   </div>
                 </div>

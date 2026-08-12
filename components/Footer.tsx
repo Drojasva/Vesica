@@ -1,20 +1,20 @@
 import Logo from './Logo'
 
-const productLinks = ['Instrucciones de Trabajo Digitales', 'Flujos Conectados', 'Analíticas Operacionales', 'Integraciones', 'App Móvil']
-const solutionLinks = ['Manufactura', 'Energía y Servicios', 'Alimentos y Bebidas', 'Químicos', 'Minería']
+const productLinks = [
+  { label: 'Producto', href: '/product' },
+  { label: 'Solicitar Demo', href: '/demo' },
+]
+const solutionLinks = [
+  { label: 'Mantenimiento', href: '/solutions/maintenance' },
+  { label: 'Producción', href: '/solutions/production' },
+  { label: 'Seguridad', href: '/solutions/safety' },
+  { label: 'Calidad', href: '/solutions/quality' },
+]
 const resourceLinks = [
   { label: 'Servicios', href: '/recursos' },
-  { label: 'Blog', href: '#' },
-  { label: 'Casos de Éxito', href: '#' },
-  { label: 'Webinars', href: '#' },
-  { label: 'Documentación', href: '#' },
-  { label: 'Comunidad', href: '#' },
 ]
 const companyLinks = [
   { label: 'Nosotros', href: '/empresa' },
-  { label: 'Carreras', href: '#' },
-  { label: 'Prensa', href: '#' },
-  { label: 'Socios', href: '#' },
   { label: 'Contacto', href: '/demo' },
 ]
 
@@ -34,11 +34,11 @@ export default function Footer() {
 
         <div className="footer-col">
           <h5>Producto</h5>
-          <ul>{productLinks.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
+          <ul>{productLinks.map((l) => <li key={l.href}><a href={l.href}>{l.label}</a></li>)}</ul>
         </div>
         <div className="footer-col">
           <h5>Soluciones</h5>
-          <ul>{solutionLinks.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
+          <ul>{solutionLinks.map((l) => <li key={l.href}><a href={l.href}>{l.label}</a></li>)}</ul>
         </div>
         <div className="footer-col">
           <h5>Recursos</h5>
@@ -58,11 +58,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <span>© 2026 DevSolution SpA. Todos los derechos reservados.</span>
-        <div style={{ display: 'flex', gap: '24px' }}>
-          <a href="#">Política de Privacidad</a>
-          <a href="#">Términos del Servicio</a>
-          <a href="#">Configuración de Cookies</a>
-        </div>
+        <span>Transformación digital industrial con foco en ejecución.</span>
       </div>
     </footer>
   )
