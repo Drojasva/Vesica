@@ -313,7 +313,7 @@ export default function DemoForm() {
                   </p>
                 )}
                 {captchaError && (
-                  <p style={{ fontSize: '13px', color: '#dc2626', textAlign: 'center' }}>
+                  <p style={{ fontSize: '13px', color: 'var(--danger)', textAlign: 'center' }}>
                     {captchaError}
                   </p>
                 )}

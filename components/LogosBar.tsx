@@ -1,7 +1,7 @@
 export default function LogosBar() {
   return (
     <div className="logos-bar">
-      <p>Empresas con las que trabajamos</p>
+      <p>Con quién trabajamos</p>
       <div className="logos-client-shell">
         <div className="client-logo-card">
           <span className="client-logo-eyebrow">Cliente activo</span>

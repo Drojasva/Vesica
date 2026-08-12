@@ -195,19 +195,6 @@ export default function RecursosPage() {
         </div>
       </section>
 
-      <section className="servicios-testimonial">
-        <div className="servicios-testimonial-inner">
-          <blockquote>
-            &ldquo;El equipo de éxito del cliente de DevSolution ha proporcionado una orientación informada
-            y perspicaz sobre cómo utilizar DevSolution en nuestros programas de calidad y seguridad. Su
-            enfoque en resultados rápidos y adopción rápida es fundamental en un momento en que el
-            mercado se mueve tan rápido y necesitamos ser más ágiles que nunca.&rdquo;
-          </blockquote>
-          <p className="testimonial-author">Todd Wing</p>
-          <p className="testimonial-role">Responsable de Ingeniería de Fabricación</p>
-        </div>
-      </section>
-
       <CTASection />
       <Footer />
     </>

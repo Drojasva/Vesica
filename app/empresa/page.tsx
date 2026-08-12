@@ -160,7 +160,7 @@ export default function EmpresaPage() {
                   <span
                     style={{
                       background: 'var(--accent)',
-                      color: '#fff',
+                      color: 'var(--white)',
                       fontWeight: 800,
                       fontSize: '14px',
                       borderRadius: '8px',
@@ -188,7 +188,7 @@ export default function EmpresaPage() {
       <section
         style={{
           background: 'var(--ink)',
-          color: '#fff',
+          color: 'var(--white)',
           padding: '80px 5%',
           textAlign: 'center',
         }}
@@ -204,7 +204,7 @@ export default function EmpresaPage() {
           >
             Conversemos sobre tu operación
           </h2>
-          <p style={{ fontSize: '17px', color: '#a3a3a3', lineHeight: 1.7, marginBottom: '36px' }}>
+          <p style={{ fontSize: '17px', color: 'var(--on-dark-body)', lineHeight: 1.7, marginBottom: '36px' }}>
             Queremos conocer tus desafíos y mostrarte cómo podemos ayudarte a resolverlos.
             Sin guiones ensayados, sin presión comercial — solo una conversación honesta
             entre profesionales que entienden la industria.
@@ -216,7 +216,7 @@ export default function EmpresaPage() {
           >
             Agendar Conversación
           </a>
-          <p style={{ marginTop: '16px', fontSize: '14px', color: '#5a7a9e' }}>
+          <p style={{ marginTop: '16px', fontSize: '14px', color: 'var(--on-dark-subtle)' }}>
             Sin compromiso — descubre cómo sumamos valor a tu operación
           </p>
         </div>
